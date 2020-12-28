@@ -1,0 +1,37 @@
+find_executable: checking for brew... -------------------- no
+
+--------------------
+
+find_executable: checking for pacman... -------------------- no
+
+--------------------
+
+assert_minimum_ruby_version!: checking for Ruby version >= 2.3.0... -------------------- yes
+
+--------------------
+
+find_executable: checking for pkg-config... -------------------- yes
+
+--------------------
+
+assert_has_dev_libs!: checking for outdated ImageMagick version (<= 6.7.7)... -------------------- no
+
+Detected ImageMagick version: 6.9.10
+--------------------
+
+find_executable: checking for gcc... -------------------- yes
+
+--------------------
+
+"gcc -o conftest -I/home/ec2-user/.rvm/rubies/ruby-2.5.3/include/ruby-2.5.0/x86_64-linux -I/home/ec2-user/.rvm/rubies/ruby-2.5.3/include/ruby-2.5.0/ruby/backward -I/home/ec2-user/.rvm/rubies/ruby-2.5.3/include/ruby-2.5.0 -I.  -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/include/ImageMagick-6    -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/include/ImageMagick-6   conftest.c  -L. -L/home/ec2-user/.rvm/rubies/ruby-2.5.3/lib -Wl,-rpath,/home/ec2-user/.rvm/rubies/ruby-2.5.3/lib  -lMagickCore-6.Q16      -lMagickCore-6.Q16    -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+gcc: error: libgomp.spec: No such file or directory
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+

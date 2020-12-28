@@ -1,0 +1,187 @@
+@media screen and ( max-width: 400px ) {
+   .dropmenu li  img {
+       position: relative;
+       right: 20px;
+   }
+   .form-group .box {
+       position: relative;
+       left: 5px;
+    }
+    
+    .row-group .row-item #submit {
+         position: relative;
+         bottom: 90px;
+    }
+    
+    .pro-photo label { 
+        position: relative;
+        bottom: 50px;
+        left: 5px;
+    }
+    .row-group {
+        max-width: 320px;
+    }
+    
+    .pro-photo img {
+        position: relative;
+        top: 50px;
+        right: 45px;
+    }
+    .pro-photo input {
+        position: relative;
+        top: 70px;
+        left: 115px;
+    }
+    
+    .header_sns #header #title_logo a img {
+        width: 130px;
+        position: relative;
+        left: 0px;
+    }
+}
+
+@media screen and ( min-width: 650px ) {
+    
+}
+
+@media screen and( min-width: 401px ) and( max-width: 750px ) {
+    .header_sns #header #title_logo a img {
+        position: relative;
+        left: 20px;
+    }
+    
+    .pro-photo {
+        position: relative;
+        top: 40px;
+        
+    }
+    
+    .pro-photo label { 
+        position: relative;
+        bottom: 90px;
+       
+    }
+    .pro-photo img {
+        position: relative;
+        right: 20px;
+        top: 10px;
+    }
+    
+    .pro-photo input {
+        position: relative;
+        left: 140px;
+        top: 30px;
+    }
+}
+
+@media screen and ( min-width: 751px ) and  (max-width: 834px) {
+    .pro-photo label {
+        position: relative;
+        bottom: 40px;
+    }
+    
+    .pro-photo img {
+        position: relative;
+        right: 20px;
+        top: 60px;
+        width: 140px;
+        height: 140px;
+    }
+    
+    .pro-photo input {
+        position: relative;
+        top: 80px;
+        left: 140px;
+        
+    }
+}
+
+
+
+@media screen and ( min-width: 835px ) {
+    .form-group label {
+        position: relative;
+        top: 39px;
+        right: 180px;
+    }
+    .pro-photo label {
+        position: relative;
+        right: 180px;
+        bottom: 90px;
+    }
+    
+    .pro-photo input {
+        position: relative;
+        left: 165px;
+        top: 20px;
+    }
+
+
+        
+    .pro-photo {
+        position: relative;
+        top: 50px;
+    }
+    
+    .row-group {
+         max-width: 430px;
+    }
+    
+    .row-group {
+        position: relative;
+        left: 20px;
+    }
+    
+    
+}
+
+
+
+@media screen and (max-width:480px) {
+   #dropmenu li img  {
+     display:none;
+   }
+   
+   .post img {
+     display:none;
+   }
+   
+   #header {
+       height: 72px;
+   }
+}
+
+
+
+button {
+    width:150px;
+    height:50px;
+    border-radius:5px;
+    color:#FFF;
+    font-weight:bold;
+    background-color:#00B285;
+    transition:all 0.3s;
+    position:relative;
+    z-index:2;
+}
+button:hover,
+button:active {
+    color:#00B285;
+}
+button:after {
+    width:100%;
+    height:0%;
+    border-radius:5px;
+    background-color:#FFF;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    transition:all 0.3s;
+    z-index:-1;
+}
+button:hover:after,
+button:active:after {
+    border:2px solid #00B285;
+    heght:100%;
+}

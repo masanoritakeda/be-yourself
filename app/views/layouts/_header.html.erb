@@ -1,0 +1,55 @@
+<div id="header_bar" class="nologin header_sns">
+    <div id="header_wrapper">
+      <div class="service-list">
+        <div class="service-list_inner">
+          <div>
+            <a href="#">エリア</a>
+          </div>
+          <div>
+            <a href="#">カテゴリ</a>
+          </div>
+          <div class="now">
+            <a href="#">ホーム</a>
+          </div>
+        </div>
+      </div>
+    
+    <div id="header">
+      <div id="title_logo">
+        <a href="/">
+          <%= image_tag "logo-img.png" %>
+        </a
+      </div>
+      
+      
+    
+      <div id="gn_menu">
+        <% if logged_in? %>
+          <div>
+            <a href="/" class="post">
+             <%= image_tag "post.png" %>
+            </a>
+          </div>
+          <ul id="dropmenu">
+            <li>
+              <%= image_tag "a.png", width: "64" %>
+              <ul>
+                <li><%= link_to 'マイページ', user_path(current_user) %></li>
+                <li><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>
+                <li><%= link_to 'ログアウトする', logout_path, method: :delete %></li>
+              </ul>
+            </li>
+          </ul>
+        <% else %>
+          <div>
+            <%= link_to '登録する', signup_path, class: "btn_design" %>
+          </div>
+          <div class="s_login">
+            <%= link_to 'ログイン', login_path %>
+          </div>
+        <% end %>
+      </div>
+    </nav>
+    </div>
+  </div>
+</div>
