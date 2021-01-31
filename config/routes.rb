@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- root to: 'toppages#index'
+ root to: 'posts#index'
  
  get 'login', to: 'sessions#new'
  post 'login', to: 'sessions#create'
@@ -11,4 +11,6 @@ Rails.application.routes.draw do
      post 'edit'
    end 
  end 
+ 
+ resources :posts, only: [:index, :create, :destroy, :edit]
 end

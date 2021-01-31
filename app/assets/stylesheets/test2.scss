@@ -1,7 +1,46 @@
-@media screen and ( max-width: 400px ) {
-   .dropmenu li  img {
+@media screen and ( max-width: 400px) {
+    .introduce {
+        width: 123%;
+        right: 58px;
+    }
+}
+
+
+@media screen and ( min-width: 401px ) and ( max-width: 429px) {
+    .introduce {
+        width: 123%;
+        right: 50px;
+    }
+}
+
+@media screen and ( min-width: 430px) and ( max-width: 450px ) {
+    .introduce {
+        width: 119%;
+        right: 50px;
+    }
+}
+
+
+
+@media screen and ( min-width: 430px) and ( max-width: 800px) {
+    .introduce-in {
+        width: 100%;
+        
+    }
+}
+
+
+@media screen and ( max-width: 450px ) {
+   #dropmenu li a img  {
        position: relative;
-       right: 20px;
+       left: 88px;
+       bottom: 15px;
+       width: 45px;
+       
+   }
+   
+   #dropmenu li ul   {
+        display: none;
    }
    .form-group .box {
        position: relative;
@@ -13,7 +52,7 @@
          bottom: 90px;
     }
     
-    .pro-photo label { 
+    .edit-pro-photo label { 
         position: relative;
         bottom: 50px;
         left: 5px;
@@ -22,65 +61,291 @@
         max-width: 320px;
     }
     
-    .pro-photo img {
+    .edit-pro-photo img {
         position: relative;
         top: 50px;
         right: 45px;
     }
-    .pro-photo input {
+    .edit-pro-photo input {
         position: relative;
         top: 70px;
         left: 115px;
     }
     
     .header_sns #header #title_logo a img {
-        width: 130px;
+        width: 140px;
         position: relative;
-        left: 0px;
+        left: 20px;
+        margin: 10px;
+       
+    }
+    
+    .header_sns #header #title_logo a {
+        position: relative;
+        top: 13px;
+        right:25px;
+    }
+    .text-center h2 {
+        font-size: 1.7rem;
+    }
+    
+    
+    
+    #main_column {
+        padding: 0 20px;
+    }
+    
+    .signup {
+        display: none;
+    }
+    
+    .login a  {
+        right: 60px;
+    }
+    
+    #header {
+       height: 70px;
+   }
+    
+    .form-wrapper {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .hamburger label {
+        position: absolute;
+        right: 8px;
+    }
+    
+     #nav-content {
+        max-width: 330px;
+    }
+    
+    #nav-content .user a {
+        width: 318px;
+    }
+    
+    #nav-drawer #nav-open {
+        top: 2px;
+        right: 15px;
+    }
+    
+    .user-name {
+        left: 27px;
     }
 }
 
-@media screen and ( min-width: 650px ) {
+@media screen and ( min-width: 451px ) {
+    section {
+        padding: 0 30px;
+    }
     
-}
-
-@media screen and( min-width: 401px ) and( max-width: 750px ) {
-    .header_sns #header #title_logo a img {
+    #dropmenu li ul {
         position: relative;
+        bottom: 35px;
         left: 20px;
     }
     
-    .pro-photo {
+    #nav-input:checked ~ #nav-content {
+        transform: translateX(30%);
+    }
+    #nav-content {
+        max-width: 420px;
+    }
+    
+    .login a  {
+        bottom: 40px;
+    }
+
+}
+
+@media screen and ( min-width: 451px ) and  (max-width: 700px) {
+     #dropmenu li a img {
+        position: relative;
+        left: 70px;
+        bottom: 45px;
+     }
+     
+     #dropmenu li {
+        position: relative;
+        top: 9px;
+     }
+}
+
+
+
+@media screen and ( min-width: 451px ) and ( max-width: 539px ) {
+    #nav-content li a {
+        width: 415px;
+    }
+}
+
+@media screen and( min-width: 451px ) and( max-width: 750px ) {
+    .header_sns #header #title_logo a img {
+        position: relative;
+        
+    }
+    
+    .edit-pro-photo {
         position: relative;
         top: 40px;
         
     }
     
-    .pro-photo label { 
+    .edit-pro-photo label { 
         position: relative;
         bottom: 90px;
        
     }
-    .pro-photo img {
+    .edit-pro-photo img {
         position: relative;
         right: 20px;
         top: 10px;
     }
     
-    .pro-photo input {
+    .edit-pro-photo input {
         position: relative;
         left: 140px;
         top: 30px;
     }
 }
 
+@media screen and ( min-width: 451px ) and ( max-width: 830px) {
+    
+}
+
+
+
+@media screen and ( min-width: 540px ) {
+    #nav-content {
+        max-width: 540px;
+    }
+    
+    #nav-content li a {
+        width: 533px;
+    }
+}
+
+@media screen and ( min-width: 570px ) and( max-width: 729px ) {
+    .user-name {
+        left: 40px;
+    }
+}
+
+@media screen and ( min-width: 451px ) and( max-width: 600px ) {
+    .pro-photo {
+        left: 0px;
+    }
+    
+    .introduce {
+        width: 105%;
+        right: 28px;
+    }
+    
+    .user-name {
+        left: 42px;
+    }
+}
+
+@media screen and ( max-width: 600px ) {
+    .introduce {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and ( min-width: 601px) and ( max-width: 830px) {
+    .pro-photo {
+        left: 0;
+    }
+    
+    .introduce {
+        font-size: 0.9rem;
+        width: 104%;
+        right: 27px;
+    }
+}
+
+
+@media screen and ( max-width: 700px ) {
+    #header {
+        padding: 0;
+    }
+    
+    .signup a {
+        right: 140px;
+    }
+    
+    .login a {
+        right: 85px;
+    }
+    
+    #gn_menu #post-button    {
+        display: none;
+    }
+       
+    
+    
+}
+
+
+
+@media screen and ( min-width: 701px) {
+    #dropmenu li  ul {
+        position: relative;
+        left: 120px;
+        bottom: 5px;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+     #dropmenu li a img {
+        position: relative;
+        left: 165px;
+        bottom: 15px;
+    }
+    
+    #dropmenu li {
+        position: relative;
+        top: 9px;
+    }
+    
+    #nav-drawer {
+        display: none;
+    }
+    
+    .login a {
+        bottom: 10px;
+    }
+    
+    .signup a {
+        bottom: 70px;
+    }
+    
+}
+
+
+@media screen and ( min-width: 701px ) and (max-width: 830px) {
+    .pro-photo img {
+        position: relative;
+        left: 70px;
+    }
+}
+
+@media screen and ( min-width: 730px ) and  ( max-width: 830px) {
+    .user-name {
+        left: 55px;
+    }
+}
+
 @media screen and ( min-width: 751px ) and  (max-width: 834px) {
-    .pro-photo label {
+    .edit-pro-photo label {
         position: relative;
         bottom: 40px;
     }
     
-    .pro-photo img {
+    .edit-pro-photo img {
         position: relative;
         right: 20px;
         top: 60px;
@@ -88,7 +353,7 @@
         height: 140px;
     }
     
-    .pro-photo input {
+    .edit-pro-photo input {
         position: relative;
         top: 80px;
         left: 140px;
@@ -96,92 +361,135 @@
     }
 }
 
-
-
 @media screen and ( min-width: 835px ) {
-    .form-group label {
+    
+    .edit-pro-photo label {
         position: relative;
-        top: 39px;
-        right: 180px;
-    }
-    .pro-photo label {
-        position: relative;
-        right: 180px;
+        right: 100px;
         bottom: 90px;
     }
     
-    .pro-photo input {
+    .edit-pro-photo input {
         position: relative;
         left: 165px;
-        top: 20px;
+        top: 35px;
     }
 
 
         
+    .edit-pro-photo {
+        position: relative;
+        top: 60px;
+    }
+    
+    .edit-pro-photo img {
+        position: relative;
+        top: 20px;
+    }
+    
+    
+    
+    .row-group {
+        position: relative;
+        left: 14px;
+        top: 70px;
+        max-width: 430px;
+    }
+    
+    #submit {
+        position: relative;
+        top: 20px;
+    }
+}
+
+@media screen and ( max-width: 830px) {
+    .pro-photo  {
+       text-align: center;
+    }
+    
+    .user-name {
+       top: 55px;
+       padding: 0 25px;
+       position: relative;
+       text-align: center;
+       width: 90%;
+       margin-bottom: 20px;
+    }
+    
+    .introduce {
+        border-top: 1px solid #cccccc;
+        position: relative;
+        margin-top: 100px;
+        
+    }
+    
+    .introduce-in {
+        padding: 40px 35px 25px 55px;
+    }
+    
+}
+
+@media screen and ( min-width: 831px) {
     .pro-photo {
         position: relative;
-        top: 50px;
+        left: 120px;
+        top: 55px;
+        width: 100px;
     }
     
-    .row-group {
-         max-width: 430px;
+    .introduce {
+        margin-left: 350px;
+        position: relative; 
+        left: 30px; 
+        bottom: 147px;
+        height: 100px;
     }
     
-    .row-group {
+    .profile {
+        padding: 0 48px;
+    }
+}
+
+@media screen and ( min-width: 855px ) {
+    .form-group label {
         position: relative;
-        left: 20px;
+        top: 39px;
+        right: 100px;
+    }
+   .form-group input, .form-group textarea {
+       position: relative;
+       left: 70px;
+   }
+    section {
+        padding: 0 80px;
+    }
+}
+
+@media screen and ( min-width: 831px ) and ( max-width: 950px) {
+    .introduce-in {
+        width: 85%;
+    }
+}
+
+@media screen and ( min-width: 951px ) and ( max-width: 1160px) {
+    .introduce {
+        margin-right: 60px; 
+    }
+}
+
+
+@media screen and ( min-width: 1200px) {
+    .pro-photo {
+        left: 160px;
     }
     
+    .user-name {
+        left: 156px;
+    }
     
+    .introduce {
+        margin-left: 390px;
+    }
 }
 
 
-
-@media screen and (max-width:480px) {
-   #dropmenu li img  {
-     display:none;
-   }
-   
-   .post img {
-     display:none;
-   }
-   
-   #header {
-       height: 72px;
-   }
-}
-
-
-
-button {
-    width:150px;
-    height:50px;
-    border-radius:5px;
-    color:#FFF;
-    font-weight:bold;
-    background-color:#00B285;
-    transition:all 0.3s;
-    position:relative;
-    z-index:2;
-}
-button:hover,
-button:active {
-    color:#00B285;
-}
-button:after {
-    width:100%;
-    height:0%;
-    border-radius:5px;
-    background-color:#FFF;
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    transition:all 0.3s;
-    z-index:-1;
-}
-button:hover:after,
-button:active:after {
-    border:2px solid #00B285;
-    heght:100%;
-}

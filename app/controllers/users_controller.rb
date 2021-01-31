@@ -35,6 +35,7 @@ class UsersController < ApplicationController
       
     if current_user == @user
       if @user.update(user_params)
+
         flash[:success] = 'ユーザー情報を編集しました。'
         render :edit
       else 

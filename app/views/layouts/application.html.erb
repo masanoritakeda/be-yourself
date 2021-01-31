@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BeYourself</title>
     <%= csrf_meta_tags %>
@@ -17,14 +18,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
   </head>
 
-  <body class="photo explore listview">
+  <body>
     <%= render 'layouts/header' %> 
     
     <div id="main_column">
-      <div class="container">
-        <%= render 'layouts/flash_messages' %>
-      </div>
-        
+      <%= render 'layouts/flash_messages' %>
       <%= yield %>
     </div>
     
