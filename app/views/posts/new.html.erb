@@ -1,0 +1,51 @@
+<section class="postpage">
+  <%= form_with(model: @post, local: true) do |f| %>
+    <h2 class="post">写真を投稿する</h2>
+    <div class="fileup">
+      <span class="btn btn-default btn-file">
+        <%= f.file_field :image, class: 'img_filed', required: "required" %>
+        <%= f.label :image, '写真を選択' %>
+        <%= f.hidden_field :image_cache %>
+      </span>
+      <div class="post_prev">
+       <% if @post.image? %>
+          <%= image_tag @post.image.url, id: :img_prev%>
+        <% else %>
+        <div>
+          <%= image_tag "select.png", id: :img_prev, size: '400x100' %>
+        </div>
+        <% end %>
+      </div>
+      <script type="text/javascript">
+        $(function() {
+          function readURL(input) {
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+            $('#img_prev').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+            }
+          }
+          $(".img_filed").change(function(){
+            readURL(this);
+          });
+        });
+      </script>
+    </div>
+    <div class="posttitle">
+      <%= f.label :title, 'タイトル' %> 
+      <%= f.text_field :title, required: "required" %>
+    </div>
+    <div class="postcontent">
+      <%= f.label :content, '写真の説明' %>
+      <%= f.text_area :content, required: "required" %> 
+    </div>
+    
+    <div id="postbutton">
+     <%= f.submit '投稿する', class: 'btn btn-primary btn-block' %>
+     </div>
+  <% end %>
+</section>
+
+

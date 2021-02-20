@@ -1,0 +1,15 @@
+<% @posts.each do |post| %>
+  <div>
+    <%= post.content %>
+    <%= post.title %>
+    <% if post.image.present? %>
+      <%= image_tag(post.image.url) %>
+    <% end %>
+  </div>
+  
+<% end %>
+
+
+
+ 
+

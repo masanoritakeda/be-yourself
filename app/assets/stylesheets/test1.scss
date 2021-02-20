@@ -1,7 +1,13 @@
-
-
 body {
     height: 1000px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px;
 }
 
 /* ヘッダー */
@@ -57,7 +63,7 @@ body {
 }
 
 
-#title_logo:hover, #dropmenu li a img:hover, .post:hover, .signup a img:hover, .login a img:hover  {
+#title_logo:hover, #dropmenu li a img:hover, #post-button img:hover, .signup a img:hover, .login a img:hover  {
     opacity: 0.7;
 } 
 
@@ -115,7 +121,7 @@ body {
  }
 
 
-#post-button .post img  {
+#post-button  img  {
     position: relative;
     bottom: 16px;
     
@@ -125,10 +131,10 @@ body {
    float: right;
 }
 
-#gn_menu #post-button .post {
+#gn_menu #post-button  {
     display: block;
 }
-#gn_menu #post-button .post img  {
+#gn_menu #post-button  img  {
    width: 70px;
 } 
 
@@ -167,16 +173,15 @@ h1 {
     font-weight: bold;
     font-feature-settings: "pkna";
     letter-spacing: 1px;
-     width: 100%;
      margin: 0  auto;
-     position:relative;
-     top: 120px;
+     
 }
 
 #submit  {
-    
-    
+    position:relative;
     margin: 0  auto;
+    width: 60%;
+    padding: 40px 0 60px;
 }
 
 
@@ -184,8 +189,18 @@ h1 {
 
 
  .form-group {
-    padding: 10px 0 8px 0;
-     
+    margin-bottom: 0;
+    padding: 15px 0;
+ }
+ 
+ .form-group input {
+     width: 100%;
+    border: 1px solid rgb(206, 212, 218);
+    height: 45px;
+    background: rgb(250, 250, 250);
+    position: relative;
+    top: 10px;
+    padding-left: 20px;
  }
  
  
@@ -261,6 +276,7 @@ h1 {
     width: 140px;
     margin: 0;
     padding: 0;
+    
 }
 #dropmenu li ul li {
     overflow: hidden;
@@ -270,6 +286,9 @@ h1 {
     color: #fff;
     transition: .3s;
 }
+
+
+
 #dropmenu li ul li a {
     padding: 13px 15px;
     text-align: left;
@@ -277,10 +296,11 @@ h1 {
     font-weight: 800;
 }
 
-#dropmenu > li:hover li:hover > a {  background: #EEEEEE }
+#dropmenu > li:hover li:hover > a {  background: #EEEEEE;}
 #dropmenu > li:hover > ul > li {
     overflow: visible;
     height: 38px;
+    
 }
 
 
@@ -297,8 +317,8 @@ h1 {
  
  
  
-.box {
-    font-size: 1.1rem;
+.box, .introduce-box, .pro-box {
+    font-size: 1rem;
     font-weight: 550;
     line-height: 100%;
     margin-bottom: 10px;
@@ -327,15 +347,15 @@ textarea {
     background: rgb(250, 250, 250);
 }
 
+.form-group {
+    text-align: left;
+}
 
 .row-group {
-    max-width: 380px;
-    margin: 2em auto;
-    position: relative;
-    top: 30px;
+    padding: 50px 10px;
 }
- #main_column section .edit-mypage {
-    padding-bottom: 180px;
+  .edit-mypage {
+    padding: 30px 0;
     margin-bottom: 100px;
 }
 
@@ -346,10 +366,11 @@ section {
    
 }
 
-.text-center h2 {
+.text-center  {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
     position: relative;
-    top: 50px;
-    font-size: 1.7rem;
 }
 
 
@@ -359,14 +380,14 @@ section {
     background: #fff;
     margin: 2em auto;
     padding: 2em 1em;
-    max-width: 380px;
+    max-width: 500px;
     position: relative;
     top: 30px;
 }
 
 .form-wrapper h2 {
     text-align: center;
-    padding: 1em 0;
+    padding: 40px 0;
     font-size: 1.7rem;
 }
 
@@ -428,15 +449,29 @@ section {
     outline: none 
 }
 
-.edit-pro-photo img {
+.edit-photo {
+    width: 70%;
+    height: 250px;
+    text-align: center;
+    background: rgb(250, 250, 250);
+    border: 1px solid rgb(206, 212, 218);
+    padding: 60px 30px;
+    margin: 0 auto;
+}
+
+.edit-photo img {
     border-radius: 50%;
     width: 140px;
     height: 140px;
     object-fit: cover;
+    position: relative;
 }
 
 
-
+.bo {
+    position: relative;
+    
+}
 
 
 
@@ -451,7 +486,7 @@ section {
     right: 19px;
     top: 5px;
 }
-
+ 
 
 /*チェックボックス等は非表示に*/
 .nav-unshown {
@@ -576,6 +611,7 @@ section {
 }
 
 
+
 .pro-photo img {
    border-radius: 50%;
    width:  160px;       
@@ -613,3 +649,140 @@ section {
     max-width: 1200px;
 }
 
+#img_prev {
+    width: 90%;
+    z-index: 20;
+    height: 300px;
+    
+}
+
+.postpage {
+    padding-top: 50px;
+}
+
+.postpage label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #C0C0C0;
+    border-left: solid 5px #7db4e6;/*左線*/
+    padding: 0 15px;
+    
+}
+
+.fileup {
+    padding: 60px 0;
+}
+
+
+
+.post_prev {
+    width: 100%;     // 80%  //
+    position: relative;
+    height: 330px;
+    top: 10px;
+    border: 3px dashed #c0c0c0; //
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+.img_filed {
+    width: 70%;
+   
+}
+
+.btn-file {
+  overflow: hidden;
+  
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 36%;
+  right: 5%;
+  min-width: 90%;
+  min-height: 45%;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  cursor: inherit;
+  display: block;
+  z-index: 30;
+  
+}
+
+
+
+.post {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+
+
+
+.posttitle {
+    padding: 20px 0 60px;
+    
+}
+
+.posttitle input {
+    width: 100%;
+    border: 1px solid #ced4da;
+    height: 45px;
+    background: rgb(250, 250, 250);
+    position: relative;
+    top: 10px;
+    padding-left: 20px;
+}
+
+.postcontent {
+    padding: 20px 0 50px;
+}
+
+#postbutton {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+#postbutton input {
+    line-height: 40px;
+    padding: 0px 20px;
+    cursor: pointer;
+    background: 0px 0px;
+    border: 2px solid rgb(56, 151, 240);
+    color: rgb(56, 151, 240);
+    font-weight: bold;
+    font-feature-settings: "pkna";
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+.upload-label {
+  display: inline-block;
+  cursor: pointer; /* カーソルを指に */
+  margin: 1em 0; /* まわりの余白 */
+  padding: .7em 1em; /* 文字まわりの余白 */
+  line-height: 1.4; /* 行間 */
+  background: #3e8bff; /* 背景色 */
+  color: #FFF; /* 文字色 */
+  font-size: 0.95em; /* フォントサイズ */
+  border-radius: 2.5em; /* 角の丸み */
+  transition: 0.2s; /* ホバーをなめらかに */
+  position: relative;
+}
+/* ホバー時 */
+.upload-label:hover {
+  box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.2); /* 影を表示 */
+}
+/* inputは隠す */
+.upload-label input {
+  display: none;
+}

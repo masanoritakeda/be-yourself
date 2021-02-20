@@ -1,7 +1,43 @@
+@media screen and ( max-width: 330px) {
+    .edit-pro-photo .box {
+        position: relative;
+        bottom: 40px;
+    }
+}
+
+
+@media screen and ( min-width: 330px) and ( max-width: 370px) {
+    .edit-pro-photo .box {
+        right: 10%;
+         position: relative;
+        bottom: 40px;
+        padding-left: 10px;
+    }
+}
+
+
+@media screen and ( min-width: 371px) and ( max-width: 450px) {
+    .edit-pro-photo .box { 
+        position: relative;
+        bottom: 50px;
+        
+    }
+}
+
+
 @media screen and ( max-width: 400px) {
     .introduce {
         width: 123%;
         right: 58px;
+    }
+    
+    .postpage {
+        padding: 0;
+    }
+    
+    .edit-photo {
+        width: 100%;
+        padding: 60px 43px;
     }
 }
 
@@ -12,6 +48,25 @@
         right: 50px;
     }
 }
+
+@media screen and ( min-width: 401px )  and ( max-width: 600px ) {
+    .edit-photo {
+        width: 80%;
+    }
+}
+
+@media screen  and ( max-width: 429px) {
+    .edit-photo {
+        height: 300px;
+    }
+}
+
+@media screen and ( min-width: 430px) {
+    .edit-photo {
+        height: 290px;
+    }
+}
+
 
 @media screen and ( min-width: 430px) and ( max-width: 450px ) {
     .introduce {
@@ -47,30 +102,29 @@
        left: 5px;
     }
     
+    
+    
     .row-group .row-item #submit {
          position: relative;
          bottom: 90px;
     }
     
-    .edit-pro-photo label { 
-        position: relative;
-        bottom: 50px;
-        left: 5px;
-    }
     .row-group {
-        max-width: 320px;
+        width: 100%;
+        padding-top: 20px ;
     }
     
     .edit-pro-photo img {
         position: relative;
-        top: 50px;
-        right: 45px;
+        top: 60px;
     }
     .edit-pro-photo input {
         position: relative;
         top: 70px;
         left: 115px;
     }
+    
+    
     
     .header_sns #header #title_logo a img {
         width: 140px;
@@ -89,10 +143,14 @@
         font-size: 1.7rem;
     }
     
+    #submit {
+        padding: 60px 0;
+    }
+    
     
     
     #main_column {
-        padding: 0 20px;
+        padding: 0 13px;
     }
     
     .signup {
@@ -133,11 +191,40 @@
     .user-name {
         left: 27px;
     }
+    
+    .btn-file input[type="file"] {
+        right: 5%;
+        min-width: 91%;
+        min-height: 36%;
+        top: 30%;
+    }
+    
+    .fileup {
+        padding: 20px 0;
+    }
+    
+    .post_prev {
+        width: 100%;
+        height: 265px;
+    }
+    
+    #img_prev {
+        width: 100%;
+        height: 260px;
+    }
 }
 
 @media screen and ( min-width: 451px ) {
     section {
         padding: 0 30px;
+    }
+    
+    .edit-mypage {
+        padding: 30px 35px;
+    }
+    
+    .edit-photo {
+        padding:  60px 70px;
     }
     
     #dropmenu li ul {
@@ -183,52 +270,11 @@
 @media screen and( min-width: 451px ) and( max-width: 750px ) {
     .header_sns #header #title_logo a img {
         position: relative;
-        
     }
-    
-    .edit-pro-photo {
-        position: relative;
-        top: 40px;
-        
-    }
-    
-    .edit-pro-photo label { 
-        position: relative;
-        bottom: 90px;
-       
-    }
-    .edit-pro-photo img {
-        position: relative;
-        right: 20px;
-        top: 10px;
-    }
-    
     .edit-pro-photo input {
         position: relative;
         left: 140px;
         top: 30px;
-    }
-}
-
-@media screen and ( min-width: 451px ) and ( max-width: 830px) {
-    
-}
-
-
-
-@media screen and ( min-width: 540px ) {
-    #nav-content {
-        max-width: 540px;
-    }
-    
-    #nav-content li a {
-        width: 533px;
-    }
-}
-
-@media screen and ( min-width: 570px ) and( max-width: 729px ) {
-    .user-name {
-        left: 40px;
     }
 }
 
@@ -245,13 +291,144 @@
     .user-name {
         left: 42px;
     }
+    
+    .post_prev div {
+        position: relative;
+        top: 12px; 
+    }
 }
+
+
+
+@media screen and ( min-width: 540px ) {
+    #nav-content {
+        max-width: 540px;
+    }
+    
+    #nav-content li a {
+        width: 533px;
+    }
+    
+    .edit-photo {
+        padding:  60px 105px;
+    }
+}
+
+@media screen and ( min-width: 551px ) {
+    .btn-file input[type="file"] {
+        top: 38%;
+        min-height: 46%;
+    }
+}
+
+
+@media screen and ( max-width: 550px ) {
+    .postpage {
+        padding-top: 30px;
+    }
+}
+
+@media screen and ( min-width: 570px ) and( max-width: 729px ) {
+    .user-name {
+        left: 40px;
+    }
+}
+
+
+
 
 @media screen and ( max-width: 600px ) {
     .introduce {
         font-size: 0.8rem;
     }
+    
+    .edit-pro {
+        padding-top: 20px;
+    }
+    
+    .bo {
+        padding-bottom: 20px;
+    }
 }
+
+
+@media screen and ( min-width: 601px) {
+    .bo {
+        padding: 30px 30px 30px 0 !important;
+    }
+    
+    .box {
+        padding: 20px ;
+        position: relative;
+        top: 10px;
+    }
+    
+    .edit-pro {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .edit-photo {
+        width: 90%;
+    }
+    
+    .pro-box {
+        position: relative;
+        padding: 0 100px 0 0;
+        bottom: 30px;
+    }
+    
+    #user_img_prev {
+        position: relative;
+        
+    }
+    
+    .introduce-box {
+        position: relative;
+        bottom: 220px;
+        padding: 20px;
+    }
+    
+    #img_prev {
+        height: 380px;
+    }
+    
+    .post_prev {
+        height: 420px;
+    }
+    
+    
+    .post_prev div {
+        position: relative;
+        top: 15px;
+    }
+    
+    .btn-file input[type=file] {
+        top: 38%;
+        min-height: 58%;
+    }
+    
+    .form-group input, textarea {
+        width: 70%;
+    }
+    
+    .form-group {
+        padding-right: 20px;
+        text-align: right;
+    }
+    
+    .form-group img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    
+    
+    #submit  {
+        padding: 60px 0;
+    }
+}
+ 
 
 @media screen and ( min-width: 601px) and ( max-width: 830px) {
     .pro-photo {
@@ -263,7 +440,12 @@
         width: 104%;
         right: 27px;
     }
+   
 }
+
+
+
+
 
 
 @media screen and ( max-width: 700px ) {
@@ -292,7 +474,7 @@
 @media screen and ( min-width: 701px) {
     #dropmenu li  ul {
         position: relative;
-        left: 120px;
+        left: 90px;
         bottom: 5px;
     }
     
@@ -302,7 +484,7 @@
     
      #dropmenu li a img {
         position: relative;
-        left: 165px;
+        left: 125px;
         bottom: 15px;
     }
     
@@ -323,6 +505,25 @@
         bottom: 70px;
     }
     
+    .post {
+        font-size: 1.7rem;
+    }
+    
+    .postpage label {
+        font-size: 1.1rem;
+    }
+    
+    .edit-photo {
+        padding: 60px 140px;
+    }
+    
+    .form-group input, textarea {
+        width: 60%;
+    }
+    
+    .form-group {
+        padding-right: 80px;    
+    }
 }
 
 
@@ -333,11 +534,38 @@
     }
 }
 
+@media screen and ( max-width: 729px ) {
+    .fileup .btn {
+        padding: 0;
+    }
+}
+
+
+
 @media screen and ( min-width: 730px ) and  ( max-width: 830px) {
     .user-name {
         left: 55px;
     }
+    
+    .post_prev {
+        width: 85%;
+        
+    }
+    
 }
+
+@media screen and ( min-width: 730px ) {
+    .fileup span {
+        padding-bottom: 50px;
+    }
+    
+    .btn-file input[type=file] {
+        right: 10%;
+        min-width: 80%;
+        top: 46%;
+    }
+}
+
 
 @media screen and ( min-width: 751px ) and  (max-width: 834px) {
     .edit-pro-photo label {
@@ -361,7 +589,25 @@
     }
 }
 
+
+@media screen and ( min-width: 800px ) {
+    .edit-photo {
+        width: 80%;
+    }
+    
+    .edit-pro {
+        width: 70%;
+    }
+}
+
 @media screen and ( min-width: 835px ) {
+    .form-group {
+         padding: 0 130px 0 0;
+    }
+    
+    .box, .introduce-box {
+        padding: 40px;
+    }
     
     .edit-pro-photo label {
         position: relative;
@@ -387,8 +633,6 @@
         top: 20px;
     }
     
-    
-    
     .row-group {
         position: relative;
         left: 14px;
@@ -399,6 +643,11 @@
     #submit {
         position: relative;
         top: 20px;
+    }
+    
+    .intro {
+        position: relative;
+        top: 30px;
     }
 }
 
@@ -448,20 +697,34 @@
     .profile {
         padding: 0 48px;
     }
+    
+    .post_prev {
+        width: 75%;
+    }
+    
+    .btn-file input[type=file] {
+        right: 15%;
+        min-width: 64%;
+    }
+   
 }
 
 @media screen and ( min-width: 855px ) {
-    .form-group label {
-        position: relative;
-        top: 39px;
-        right: 100px;
-    }
-   .form-group input, .form-group textarea {
-       position: relative;
-       left: 70px;
-   }
     section {
         padding: 0 80px;
+    }
+    
+    .img_filed {
+        width: 60%;
+    }
+    
+    .btn-file input[type=file] {
+        right: 19%;
+        min-width: 62%;
+    }
+    
+    .edit-photo {
+        padding: 60px 150px;
     }
 }
 
@@ -477,6 +740,25 @@
     }
 }
 
+@media screen and ( min-width: 1000px ) {
+    .form-group input, textarea {
+        width: 50%;
+    }
+    
+    .form-group {
+        padding-right: 190px;
+    }
+    
+    
+}
+
+
+@media screen and ( min-width: 1070px ) {
+    .btn-file input[type=file] {
+        right: 230px;
+        min-width: 50px;
+    }
+}
 
 @media screen and ( min-width: 1200px) {
     .pro-photo {

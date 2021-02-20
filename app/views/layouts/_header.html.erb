@@ -14,34 +14,37 @@
             <li class="user"><a href="/">ユーザーの名前</a></li>
             <li class="menu"><a href="/">自分らしい生活を探す</a></li>
             <li class="menu"><%= link_to 'マイページ', user_path(current_user) %></li>
-            <li class="menu"><a href="/">投稿する</a></li>
+            <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
             <li class="menu"><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>
             <li class="menu"><a herf="/">お気に入り一覧</a></li>
             <li class="menu"><%= link_to 'ログアウトする', logout_path, method: :delete %></li>
           <% else %>
-            <li class="user"><a href="/">ユーザーの名前</a></li>
+            <li class="user"><a href="/">ユーザーの名前（仮)</a></li>
             <li class="menu"><a href="/">自分らしい生活を探す</a></li>
             <li class="menu"><%= link_to '登録する',  signup_path %></li>
             <li class="menu"><%= link_to 'ログイン', login_path %></li>
-            <li class="menu"><a href="/">投稿する</a></li>
+            <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
           <% end %>
         </ul>
       </div>
       
       <div id="gn_menu">
         <% if logged_in? %>
-          <ul id="post-button">
-            <a href="/" class="post">
-              <%= image_tag "post.png" %>
-            </a>
-          </ul>
+          <div id="post-button">
+            <%= link_to image_tag("post.png"), new_post_path(@post) %>
+          </div>
           <ul id="dropmenu">
             <li>
-              <%= link_to image_tag("a.png"), user_path(current_user) %>
+              <% if @user.image? %>
+                <%= image_tag @user.image.url %>
+              <% else %>
+                <%= link_to image_tag("a.png"), user_path(current_user) %>
+              <% end %>
+             
               <ul>
                 <li><%= link_to 'マイページ', user_path(current_user) %></li>
                 <li><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>
-                <li class="menu"><a href="/">投稿する</a></li>
+                <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
                 <li class="menu"><a herf="/">お気に入り一覧</a></li>
                 <li><%= link_to 'ログアウトする', logout_path, method: :delete %></li>
               </ul>

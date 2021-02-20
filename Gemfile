@@ -58,4 +58,3 @@ gem 'carrierwave'
 gem 'rails-i18n'
 
 gem 'mini_magick'
-

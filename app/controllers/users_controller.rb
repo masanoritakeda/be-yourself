@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @post = Post.find_by(id: params[:id])
   end
 
   def new
@@ -38,12 +39,18 @@ class UsersController < ApplicationController
 
         flash[:success] = 'ユーザー情報を編集しました。'
         render :edit
+        
       else 
         flash.now[:damger] = 'ユーザー情報の編集に失敗しました。'
         render :edit
       end 
     else 
       redirect_to root_url
+    end
+    
+    def posts
+     @user = User.find(params[:id])
+     @posts = @user.posts.paginate(page: params[:page])
     end
   end
   
