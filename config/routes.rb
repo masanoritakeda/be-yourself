@@ -13,6 +13,5 @@ Rails.application.routes.draw do
    end 
  end 
  
- 
  resources :posts, only: [:show, :new, :create, :destroy]
 end

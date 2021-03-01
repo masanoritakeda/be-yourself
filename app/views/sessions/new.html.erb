@@ -4,18 +4,14 @@
     <div class="form-item">
       <%= f.email_field :email, required: "required", placeholder: "メールアドレス" %>
     </div>  
-      
     <div class="form-item">
       <%= f.password_field :password, required: "required", placeholder: "パスワード" %> 
     </div>
-    
     <div class="button-panel">
       <%= f.submit 'ログイン', class: 'button' %>
      </div>
-     
      <div class="other_acount">
       <%= link_to '新しくアカウントを作りたい方はこちら', signup_path %>
     </div>
-     
   <% end %>
   </div>

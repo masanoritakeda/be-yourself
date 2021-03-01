@@ -1,5 +1,5 @@
 body {
-    height: 1000px;
+    height: auto;
 }
 
 h2 {
@@ -10,6 +10,15 @@ h2 {
     padding-bottom: 30px;
 }
 
+ul {
+    list-style: none;
+}
+
+#wrapper {
+  width:100%;
+  overflow:hidden;
+  background: #f9f9f9;
+}
 /* ヘッダー */
 
 
@@ -48,7 +57,7 @@ h2 {
 #header {
     width: auto;
     background: url() #fff;
-    padding: 0 20px 0 20px;
+    padding: 0  0 20px;
     min-width: inherit;
     max-width: inherit;
     height: 80px;
@@ -210,9 +219,10 @@ h1 {
 .other_acount {
     text-align: center;
 	font-size: 0.8rem;
-	position: relative;
-	top: 10px;
+	padding-top: 30px;
+
 }
+
 
 .other_acount:hover {
     text-decoration: underline;
@@ -260,7 +270,6 @@ h1 {
 }
 #dropmenu {
     float: right;
-    list-style: none;
 }
 
 #dropmenu li a {
@@ -271,7 +280,6 @@ h1 {
     text-align: center;
 }
 #dropmenu li ul {
-    list-style: none;
     left: 0;
     width: 140px;
     margin: 0;
@@ -354,16 +362,10 @@ textarea {
 .row-group {
     padding: 50px 10px;
 }
-  .edit-mypage {
+
+.edit-mypage {
     padding: 30px 0;
     margin-bottom: 100px;
-}
-
-section {
-    margin: 0 auto;
-    padding: 0 10px;
-    max-width: 1000px;
-   
 }
 
 .text-center  {
@@ -373,33 +375,23 @@ section {
     position: relative;
 }
 
-
-
-
 .form-wrapper {
     background: #fff;
     margin: 2em auto;
     padding: 2em 1em;
     max-width: 500px;
-    position: relative;
-    top: 30px;
 }
 
 .form-wrapper h2 {
     text-align: center;
-    padding: 40px 0;
+    padding: 30px 0;
     font-size: 1.7rem;
-}
-
-.form-wrapper form {
-    padding: 0 1.5em;
 }
 
 .form-item {
     margin-bottom: 1.2em;
     width: 100%;
-    position: relative;
-    bottom: 20px;
+    padding: 0 20px;
 }
 
 .form-item input {
@@ -424,8 +416,7 @@ section {
 .button-panel {
     margin: 2em 0 0;
     width: 100%;
-    position: relative;
-    bottom: 5px;
+   
 }
 
 .button-panel .button {
@@ -441,7 +432,6 @@ section {
     text-transform: uppercase;
     transition: background 0.3s ease-in-out;
     width: 100%;
-  
 }
 
 .button-panel .button:hover {
@@ -543,7 +533,7 @@ section {
   overflow: auto;
   position: fixed;
   top: 0;
-  left: 0;
+  
   z-index: 9999;
   width: 1030px;
   max-width: 330px;
@@ -552,25 +542,45 @@ section {
   transition: .3s ease-in-out;
   -webkit-transform: translateX(-150%);
   transform: translateX(220%);
+  background: #fafafa;
 }
 
-#nav-content li a {
+.nav-logo {
+   text-align: center;
+   padding: 40px 20px 40px 0;
+   background: #ffffff !important;
+}
+
+#nav-content .nav-logo img {
+   width: 50%;
+   height: 50px;
+   position: relative;
+   left: 18px;
+}
+
+#nav-content li {
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.menu {
+    padding: 20px 0 38px;
+    height: 30px;
+}
+#nav-content .user a, #nav-content .menu a{
     display: block;
     font-size: 16px;
-    padding: 17px 0;
+    
     line-height: 1;
-    border-bottom: #eee solid 1px;
-    width: 280px;
-    text-align: left;
-    height: 65px;
-    padding: 24px;
+    width: 100%;
+    text-align: center;
+    
     color: #555;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
+    margin: 0;
 }
 
 #nav-content {
-    list-style: none;
     padding: 0;
 }
 
@@ -578,17 +588,17 @@ section {
     background: #F3F3F3;
     color: #555;
     height: 75px;
-   
 }
 
 #nav-content .user {
     margin-bottom: 10px;
+    background: #f8f8ff;
 }
 
-#nav-content .menu a {
-    position: relative;
-    bottom: 7px;
-}
+
+
+
+
 
 /*チェックがついたら表示させる*/
 #nav-input:checked ~ #nav-close {
@@ -616,43 +626,62 @@ section {
    border-radius: 50%;
    width:  160px;       
    height: 160px;  
+   position: relative;
+   left: 7px;
 }
 
 .user-name {
     font-size: 1.1rem; 
     font-weight: 800;
     position: relative;
-    top: 95px;
-    left: 110px;
+    top: 80px;
+    left: 105px;
     text-align: center;
     width: 200px;
     padding: 0  25px;
 }
 
 .introduce-in {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    
+    padding: 25px 0px 25px 15px;
+    width: 100%;
 }
 
+.introduce-in br {
+    padding: 10px 0;
+}
 .profile {
-    list-style: none;
     padding: 0;
-    
 }
 
-.introduce-in  {
-   width: 100%;
-}
 
 .introduce {
     max-width: 1200px;
 }
 
+
+.show_post {
+    display: inline-block; 
+    width: 96%;
+    padding: 40px 0 30px 40px;
+}
+
+.show_post img {
+    width: 100%;
+}
+
+.show_title {
+    color: #343a40;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 20px 0  0 15px;
+}
+
 #img_prev {
-    width: 90%;
+    width: 100%;
     z-index: 20;
-    height: 300px;
+    height: 325px;
     
 }
 
@@ -685,11 +714,6 @@ section {
     margin: 0 auto;
 }
 
-
-
-
-
-
 .img_filed {
     width: 70%;
    
@@ -701,7 +725,7 @@ section {
 }
 .btn-file input[type=file] {
   position: absolute;
-  top: 36%;
+  top: 41%;
   right: 5%;
   min-width: 90%;
   min-height: 45%;
@@ -745,8 +769,13 @@ section {
     padding: 20px 0 50px;
 }
 
+.postcontent textarea {
+    position: relative;
+    top: 15px;
+}
+
 #postbutton {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     padding-bottom: 70px;
 }
@@ -785,4 +814,49 @@ section {
 /* inputは隠す */
 .upload-label input {
   display: none;
+}
+
+.photo_post {
+    padding: 20px 0 10px;
+}
+
+.top_photo img {
+    width: 100%;
+}
+
+.toppage ul .photo_info {
+    padding: 25px 0 0;
+}
+
+.photo_info  li {
+    padding-bottom: 20px;
+}
+
+.top_first_line img {
+    border-radius: 100px;
+    width: 38px;
+    height: 36px;
+}
+
+.top_first_line a {
+    color: #343a40;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.top_first_line a:hover {
+    text-decoration: none;
+}
+
+.top_first_line .created_at {
+    font-size: 0.8rem;
+    float: right;
+    position: relative;
+    top: 8px;
+    font-weight: 600;
+}
+
+.top_title {
+    font-size: 1.5rem;
+    font-weight: 500;
 }

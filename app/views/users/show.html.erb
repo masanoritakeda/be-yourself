@@ -1,15 +1,28 @@
-
-<ul class="profile">
-  <li class="pro-photo">
-    <%= image_tag @user.image.url %>
-  </li>
-  <li class="user-name">
-    <%= @user.name %>
-  </li>
-  <li class="introduce">
-    <div class="introduce-in">
-      <%= simple_format(@user.introduce) %>
-    </div>
-  </li>
-</ul>
-
+<section class="show-mypage">
+  <ul class="profile">
+    <li class="pro-photo">
+      <%= image_tag @user.image.url %>
+    </li>
+    <li class="user-name">
+      <%= @user.name %>
+    </li>
+    <li class="introduce">
+      <div class="introduce-in">
+        <%= simple_format(@user.introduce) %>
+      </div>
+    </li>
+   </ul>
+   <% @posts.each do |post| %>
+     <ul class="show_post">
+       <li>
+         <% if post.image.present? %>
+          <%= link_to image_tag(post.image.url), "/posts/#{post.id}" %>
+         <% end %>
+       </li>
+       <li class="show_title">
+         <%= post.title %>
+       </li>
+    
+      </ul>
+    <% end %>
+</section>

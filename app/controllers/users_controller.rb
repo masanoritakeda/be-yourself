@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:show, :edit,:update]
+  before_action :require_user_logged_in, only: [:edit,:update]
   
   def show
     @user = User.find(params[:id])
     @post = Post.find_by(id: params[:id])
+    @posts = Post.order(created_at:"desc")
   end
 
   def new

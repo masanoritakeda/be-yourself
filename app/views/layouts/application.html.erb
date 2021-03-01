@@ -26,16 +26,18 @@
     </script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+    <style lang="scss">
+    </style>
   </head>
 
   <body>
-    <%= render 'layouts/header' %> 
+    <div id="wrapper">
+      <%= render 'layouts/header',  user: @user %> 
     
-    <div id="main_column">
-      <%= render 'layouts/flash_messages' %>
-      <%= yield %>
+      <div id="main_column">
+        <%= render 'layouts/flash_messages' %>
+        <%= yield %>
+      </div>
     </div>
-    
   </body>
 </html>

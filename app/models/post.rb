@@ -3,6 +3,6 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :image, presence: true
   mount_uploader :image, ImgUploader
- belongs_to :user
- validates :user_id, presence: true
+  belongs_to :user
+  validates :user_id, presence: true
 end

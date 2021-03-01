@@ -11,7 +11,8 @@
         <label class="nav-unshown" id="nav-close" for="nav-input"></label>
         <ul id="nav-content">
           <% if logged_in? %>
-            <li class="user"><a href="/">ユーザーの名前</a></li>
+            <li class="nav-logo"><%= link_to image_tag("logo2.png"), "/" %></li>
+            <li class="user"><%= current_user.name %></li>
             <li class="menu"><a href="/">自分らしい生活を探す</a></li>
             <li class="menu"><%= link_to 'マイページ', user_path(current_user) %></li>
             <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
@@ -19,7 +20,8 @@
             <li class="menu"><a herf="/">お気に入り一覧</a></li>
             <li class="menu"><%= link_to 'ログアウトする', logout_path, method: :delete %></li>
           <% else %>
-            <li class="user"><a href="/">ユーザーの名前（仮)</a></li>
+            <li class="nav-logo"><%= link_to image_tag("logo3.png"), "/" %></li>
+            
             <li class="menu"><a href="/">自分らしい生活を探す</a></li>
             <li class="menu"><%= link_to '登録する',  signup_path %></li>
             <li class="menu"><%= link_to 'ログイン', login_path %></li>
@@ -35,17 +37,14 @@
           </div>
           <ul id="dropmenu">
             <li>
-              <% if @user.image? %>
-                <%= image_tag @user.image.url %>
-              <% else %>
-                <%= link_to image_tag("a.png"), user_path(current_user) %>
-              <% end %>
-             
+              <%= link_to image_tag("a.png"), user_path(current_user) %>
+              
+              
               <ul>
                 <li><%= link_to 'マイページ', user_path(current_user) %></li>
                 <li><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>
-                <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
-                <li class="menu"><a herf="/">お気に入り一覧</a></li>
+                <li><%= link_to '投稿する', new_post_path(@post) %></li>
+                <li><a herf="/">お気に入り一覧</a></li>
                 <li><%= link_to 'ログアウトする', logout_path, method: :delete %></li>
               </ul>
             </li>

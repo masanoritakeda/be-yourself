@@ -6,20 +6,15 @@
     <div class="form-item">
       <%= f.text_field :name, required: "required", placeholder: "名前" %>
     </div>
-  
-  
     <div class="form-item">
       <%= f.email_field :email, required: "required", placeholder: "メールアドレス" %>
     </div>
-    
     <div class="form-item">
       <%= f.password_field :password, required: "required", placeholder: "パスワード" %> 
     </div>
-    
     <div class="form-item">
       <%= f.password_field :password_confirmation, required: "required", placeholder: "パスワード(確認)"  %> 
     </div>
-     
     <div class="button-panel">
       <%= f.submit '登録',  class: 'button' %>
     </div>
