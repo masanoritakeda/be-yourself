@@ -1,6 +1,6 @@
 <div class="form-wrapper">
   <h2>アカウント登録</h2>
-  <%= form_with model: @user do |f| %>
+  <%= form_with(model: @user, local: true) do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
     
     <div class="form-item">
@@ -15,6 +15,37 @@
     <div class="form-item">
       <%= f.password_field :password_confirmation, required: "required", placeholder: "パスワード(確認)"  %> 
     </div>
+    <div class="form-item-photo">
+      <h4>プロフィール画像</h4>
+      <% if @user.image.present? %>
+        <%= image_tag @user.image.url, id: :image_prev %>
+      <% else %>
+        <%= image_tag "a.png", id: :image_prev %>
+      <% end %>
+      <div>
+        <label>
+          <%= f.file_field :image, required: "required",  :id => 'user_img' %> 写真を選択
+        </label>
+        <script type="text/javascript">
+        $(function() {
+          function readURL(input) {
+            if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+            $('#image_prev').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+            }
+          }
+          $("#user_img").change(function(){
+            readURL(this);
+            });
+          });
+        </script>
+      </div>
+      
+    </div>
+    
     <div class="button-panel">
       <%= f.submit '登録',  class: 'button' %>
     </div>

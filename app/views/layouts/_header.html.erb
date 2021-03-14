@@ -1,63 +1,70 @@
-<div id="header_bar" class="nologin header_sns">
-  <div id="header_wrapper">
-    <div id="header">
-      <div id="title_logo">
-        <%= link_to image_tag("logo.png"), "/" %>
-      </div>
-      
-      <div id="nav-drawer">
-        <input id="nav-input" type="checkbox" class="nav-unshown">
-        <label id="nav-open" for="nav-input"><span></span></label>
-        <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-        <ul id="nav-content">
-          <% if logged_in? %>
-            <li class="nav-logo"><%= link_to image_tag("logo2.png"), "/" %></li>
-            <li class="user"><%= current_user.name %></li>
-            <li class="menu"><a href="/">自分らしい生活を探す</a></li>
-            <li class="menu"><%= link_to 'マイページ', user_path(current_user) %></li>
-            <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
-            <li class="menu"><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>
-            <li class="menu"><a herf="/">お気に入り一覧</a></li>
-            <li class="menu"><%= link_to 'ログアウトする', logout_path, method: :delete %></li>
-          <% else %>
-            <li class="nav-logo"><%= link_to image_tag("logo3.png"), "/" %></li>
-            
-            <li class="menu"><a href="/">自分らしい生活を探す</a></li>
-            <li class="menu"><%= link_to '登録する',  signup_path %></li>
-            <li class="menu"><%= link_to 'ログイン', login_path %></li>
-            <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
-          <% end %>
-        </ul>
-      </div>
-      
-      <div id="gn_menu">
-        <% if logged_in? %>
-          <div id="post-button">
-            <%= link_to image_tag("post.png"), new_post_path(@post) %>
-          </div>
-          <ul id="dropmenu">
-            <li>
-              <%= link_to image_tag("a.png"), user_path(current_user) %>
-              
-              
-              <ul>
-                <li><%= link_to 'マイページ', user_path(current_user) %></li>
-                <li><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>
-                <li><%= link_to '投稿する', new_post_path(@post) %></li>
-                <li><a herf="/">お気に入り一覧</a></li>
-                <li><%= link_to 'ログアウトする', logout_path, method: :delete %></li>
-              </ul>
-            </li>
-          </ul>
-        <% else %>
-          <div class="login">
-            <%= link_to image_tag("login.png"), login_path %>
-          </div>
-          <div class="signup">
-            <%= link_to image_tag("signup.png"), signup_path %>
-          </div>
-        <% end %>
-      </div>
-    </div>
+<div id="header">
+  <div id="title_logo">
+    <%= link_to image_tag("logo.png"), "/" %>
   </div>
+      
+  <div id="nav-drawer">
+    <input id="nav-input" type="checkbox" class="nav-unshown">
+    <label id="nav-open" for="nav-input"><span></span></label>
+    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+    <ul id="nav-content">
+      <% if logged_in? %>
+        <li class="user">
+          <a class="user_image" href="<%= user_path(current_user) %>">
+            <%= image_tag current_user.image.url %>
+            <%= current_user.name %>
+          </a>
+        </li>
+        <li class="menu"><a href="/">自分らしい生活を探す</a></li>
+        <li class="menu"><%= link_to 'マイページ', user_path(current_user) %></li>
+        <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
+        <li class="menu"><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>
+        <li class="menu"><a herf="/">お気に入り一覧</a></li>
+        <li class="menu"><%= link_to 'ログアウトする', logout_path, method: :delete %></li>
+      <% else %>
+        <li class="menu"><a href="/">自分らしい生活を探す</a></li>
+        <li class="menu"><%= link_to 'アカウントを登録する(無料)',  signup_path %></li>
+        <li class="menu"><%= link_to 'ログイン', login_path %></li>
+        <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
+      <% end %>
+    </ul>
+  </div>
+      
+  <div id="gn_menu">
+    <% if logged_in? %>
+      <div id="post-button">
+        <%= link_to image_tag("post.png"), new_post_path(@post) %>
+      </div>
+          
+      <ul id="dropmenu">
+        <li>
+          <% if current_user.image %>
+            <%= link_to image_tag(current_user.image.url), user_path(current_user), class: 'user_image' %>
+          <% else %>
+            <%= link_to image_tag("a.png"), user_path(current_user), class: 'default_image' %>
+          <% end %>
+          <ul>
+            <li><%= link_to 'マイページ', user_path(current_user) %></li>
+            <li><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>
+            <li><%= link_to '投稿する', new_post_path(@post) %></li>
+            <li><a herf="/">お気に入り一覧</a></li>
+            <li><%= link_to 'ログアウトする', logout_path, method: :delete %></li>
+          </ul>
+        </li>
+      </ul>
+    <% else %>
+      <div class="account">
+        <%= link_to image_tag("login.png"), login_path, class: 'login' %>
+        <%= link_to image_tag("signup.png"), signup_path, class: 'signup' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="search_form">
+  <%= form_tag(searchs_path, :method => 'get') do %>
+    <%= text_field_tag :search, params[:search], placeholder: "場所の名前、キーワード",   class: "searchtext" %>
+    <%= submit_tag '検索', :title => nil, :content => nil,  class: "searchbutton" %>
+  <% end %>
+  
 </div>

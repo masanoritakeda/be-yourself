@@ -36,23 +36,24 @@
         padding: 20px 0 20px 0px;
     }
     
-    .postpage {
+    .post_new {
         padding: 0;
     }
     
     .edit-photo {
         width: 100%;
-        padding: 60px 43px;
     }
     
-    #nav-content {
-        background: #D3D3D3;
+    .account {
+        left: 37%;
+        width: 50%;
     }
 }
 
 @media screen and ( min-width: 400px) and ( max-width: 450px ) {
-    .toppage {
-        padding: 0 13px 0 27px;
+    .account {
+        left: 32%;
+        bottom: 71px;
     }
 }
 
@@ -109,16 +110,20 @@
 
 @media screen and ( max-width: 450px ) {
    #dropmenu li a img  {
-       position: relative;
-       left: 88px;
-       bottom: 15px;
-       width: 45px;
-       
+       width: 42px;
+       height: 42px;
    }
    
    #dropmenu li ul   {
         display: none;
    }
+   
+   #dropmenu li {
+       right: 176px;
+       bottom: 19px;
+   }
+   
+   
    .form-group .box {
        position: relative;
        left: 5px;
@@ -144,21 +149,14 @@
         left: 115px;
     }
     
-    
-    
-    .header_sns #header #title_logo a img {
-        width: 140px;
-        position: relative;
-        left: 10px;
-        margin: 10px;
-       
+    #nav-drawer {
+        right: 15px;
     }
     
-    .header_sns #header #title_logo a {
-        position: relative;
-        top: 13px;
-        right:25px;
+    #header #title_logo img {
+        width: 145px;
     }
+    
     .text-center h2 {
         font-size: 1.7rem;
     }
@@ -167,10 +165,8 @@
         padding: 60px 0;
     }
     
-    
-    
     #main_column {
-        padding: 0 13px;
+       /* padding: 0 13px; */ 
     }
     
     .signup {
@@ -183,12 +179,6 @@
     
     #header {
        height: 70px;
-       padding-left:20px;
-   }
-    
-    .form-wrapper {
-        padding: 0;
-        margin: 0;
     }
     
     .hamburger label {
@@ -197,21 +187,12 @@
     }
     
      #nav-content {
-        max-width: 310px;
-        right: 124px;
+        max-width: 290px;
+        right: 115px;
     }
     
     #nav-content .user a {
         width: 318px;
-    }
-    
-    #nav-drawer #nav-open {
-        top: 2px;
-        right: 15px;
-    }
-    
-    .user-name {
-        left: 27px;
     }
     
     .btn-file input[type="file"] {
@@ -241,16 +222,6 @@
         padding: 30px 35px;
     }
     
-    .edit-photo {
-        padding:  60px 70px;
-    }
-    
-    #dropmenu li ul {
-        position: relative;
-        bottom: 35px;
-        left: 20px;
-    }
-    
     #nav-input:checked ~ #nav-content {
         transform: translateX(30%);
     }
@@ -260,42 +231,21 @@
         left: 9%;
     }
     
-    #nav-content .nav-logo img {
-        width: 53%;
-        height: 76px;
-    }
-    
     .login a  {
         bottom: 40px;
     }
 
 }
 
-@media screen and ( min-width: 451px ) and  (max-width: 700px) {
-     #dropmenu li a img {
-        position: relative;
-        left: 70px;
-        bottom: 45px;
-     }
-     
-     #dropmenu li {
-        position: relative;
-        top: 9px;
-     }
-}
 
-
-
-@media screen and ( min-width: 451px ) and ( max-width: 539px ) {
-    #nav-content li a {
-        width: 415px;
+@media screen and( min-width: 451px ) and( max-width: 550px ) {
+    .account {
+        left: 33%;
+        width: 55%;
     }
 }
 
 @media screen and( min-width: 451px ) and( max-width: 750px ) {
-    .header_sns #header #title_logo a img {
-        position: relative;
-    }
     .edit-pro-photo input {
         position: relative;
         left: 140px;
@@ -308,32 +258,6 @@
         width: 50%;
         margin: 0 auto;
     }
-    
-    .user-name {
-        left: 36px;
-    }
-}
-
-@media screen and (min-width: 451px) and ( max-width: 1000px) {
-     .toppage {
-        padding: 0 30px 0 45px;
-    }   
-}
-
-
-@media screen and ( min-width: 540px ) {
-    #nav-content li a {
-        width: 533px;
-    }
-    
-    #nav-content .nav-logo img {
-        width: 53%;
-        height: 76px;
-    }
-    
-    .edit-photo {
-        padding:  60px 105px;
-    }
 }
 
 @media screen and ( min-width: 551px ) {
@@ -341,20 +265,21 @@
         top: 43%;
         min-height: 46%;
     }
+    
+    .upload-label {
+        width: 35%;
+    }
 }
 
-
-
-
 @media screen and ( max-width: 550px ) {
-    .postpage {
+    .post_new {
         padding-top: 30px;
     }
 }
 
 @media screen and ( min-width: 570px ) and( max-width: 729px ) {
     .user-name {
-        left: 44px;
+        left: -5px;
     }
     
     .photo_post {
@@ -368,9 +293,14 @@
 
 
 @media screen and ( max-width: 600px ) {
+    body {
+        background: #fff;
+    }
+    
     .introduce {
         font-size: 0.8rem;
     }
+    
     
     .edit-pro {
         padding-top: 20px;
@@ -381,19 +311,46 @@
         padding: 30px 0;
     }
     
+    .photo_info {
+        background: rgb(249, 249, 249);
+    }
+    
     .bo {
         padding-bottom: 20px;
+    }
+    
+    .toppage ul .photo_info {
+        padding: 20px 20px 0 16px;
     }
 }
 
 
 @media screen and ( min-width: 601px) {
+    .form-wrapper {
+        padding: 20px 20px 20px 20px;
+        position: relative;
+        left: 10px;
+    }
+    
+    .top_first_line {
+        padding: 0 5px;
+    }
+    
+    .photo_info {
+        background: #fff;
+    }
+    
+    .show_title {
+        background: #fff;
+        padding: 20px 0 20px 15px;
+    }
+    
     .bo {
         padding: 30px 30px 30px 0 !important;
     }
     
     .box {
-        padding: 20px ;
+        padding: 20px 20px 20px 0;
         position: relative;
         top: 10px;
     }
@@ -426,7 +383,7 @@
     
     .show_post {
         width: 89%;
-        padding: 50px 0 50px 93px;
+        padding: 50px 0 50px 65px;
     }
     
     .show_post img {
@@ -448,6 +405,7 @@
     
     .form-group input, .form-group textarea {
         width: 70%;
+        background: #fff;
     }
     
     .form-group {
@@ -460,46 +418,47 @@
         height: 200px;
     }
     
+    .posttitle input, textarea {
+        background: #fff;
+    }
     
+    #postbutton {
+        padding-top: 20px;
+    }
     
     #submit  {
         padding: 60px 0;
+    }
+    
+    .search_form {
+        text-align: center;
+    }
+    
+    .searchtext {
+        width: 80%;
+        margin: 0 auto;
     }
 }
  
 
 @media screen and ( min-width: 601px) and ( max-width: 830px) {
-    .pro-photo {
-        left: 0;
-    }
-    
     .introduce {
         font-size: 0.9rem;
-        width: 101%;
-       right: -10px;
+        width: 100%;
+       right: -3px;
     }
    
 }
 
-
-
-
-
-
 @media screen and ( max-width: 700px ) {
-    .signup a {
-        right: 140px;
-    }
-    
-    .login a {
-        right: 85px;
-    }
-    
     #gn_menu #post-button    {
         display: none;
     }
-       
-    
+      
+    .pro-photo {
+        top: 40px;
+        right: 15px;
+    }
     
 }
 
@@ -507,19 +466,20 @@
 
 @media screen and ( min-width: 701px) {
     #dropmenu li  ul {
-        position: relative;
-        left: 90px;
         bottom: 5px;
+    }
+    
+    #dropmenu {
+        left: 125px;
+    }
+    
+    .account {
+        bottom: 42px;
+        left: 41%;
     }
     
     .hamburger {
         display: none;
-    }
-    
-     #dropmenu li a img {
-        position: relative;
-        left: 125px;
-        bottom: 15px;
     }
     
     #dropmenu li {
@@ -541,31 +501,34 @@
     
     .post {
         font-size: 1.7rem;
+        position: relative;
+        right: 2%;
     }
     
-    .postpage label {
+    .post_new label {
         font-size: 1.1rem;
     }
     
-    .edit-photo {
-        padding: 60px 140px;
-    }
-    
     .form-group input, .form-group textarea {
-        width: 60%;
+        width: 65%;
     }
     
     .form-group {
-        padding-right: 80px;    
+        padding-right: 50px;    
     }
 }
 
-
-@media screen and ( min-width: 701px ) and (max-width: 830px) {
-    .pro-photo img {
-        position: relative;
-        left: 8px;
+@media screen and ( min-width: 701px) and ( max-width: 729px ){
+    .pro-photo {
+        top: 40px;
+        left: 25px;
     }
+}
+
+@media screen and (min-width: 701px) and ( max-width: 1000px) {
+     .toppage {
+        padding: 40px 30px 0 25px;
+    }   
 }
 
 @media screen and ( max-width: 729px ) {
@@ -573,36 +536,52 @@
         padding: 0;
     }
     
-    
+    .user-name {
+    left: -20px;
+    }
 }
-
-
 
 @media screen and ( min-width: 730px ) and  ( max-width: 830px) {
     .user-name {
-        left: 51px;
+        left: -15px;
     }
     
     .post_prev {
         width: 85%;
-        
+    }
+    
+    .pro-photo {
+        top: 40px;
+        left: 25px;
     }
     
 }
 
 @media screen and ( min-width: 730px ) {
     .fileup span {
-        padding-bottom: 50px;
+        padding: 0 0 50px 0;
     }
+    
+    .posttitle input, .postcontent textarea {
+        width: 80%;
+        
+    }
+    
+    .post_new .posttitle div, .postcontent div  {
+         text-align: center;
+         padding-top: 20px;
+    }
+    
+    .post_new {
+        padding: 50px 20px 0 40px;
+    }
+    
+    
     
     .btn-file input[type=file] {
-        right: 10%;
-        min-width: 80%;
+        right: 9%;
+        min-width: 79%;
         top: 51%;
-    }
-    
-    .toppage {
-        padding-top: 40px;
     }
     
     .toppage .photo_post {
@@ -619,13 +598,23 @@
    
    .show_post {
        width: 49%;
-       padding: 40px 0 30px 36px;
+       padding: 40px 10px 30px 27px;
    }
    
    .show_post img {
        width: 98%;
-    
    }
+   
+   .edit-photo {
+       padding: 40px 0;
+   }
+   
+   .edit-photo img {
+        width: 170px;
+        height: 170px;
+        bottom: 0;
+    }
+   
 }
 
 
@@ -654,7 +643,7 @@
 
 @media screen and ( min-width: 800px ) {
     .edit-photo {
-        width: 80%;
+        width: 90%;
     }
     
     .edit-pro {
@@ -664,7 +653,10 @@
     .show_post {
         width: 49%;
     } 
-     
+    
+    #submit {
+        width: 45%;
+    } 
 }
 
 @media screen and ( min-width: 835px ) {
@@ -687,9 +679,7 @@
         left: 165px;
         top: 35px;
     }
-
-
-        
+ 
     .edit-pro-photo {
         position: relative;
         top: 60px;
@@ -726,9 +716,9 @@
     .user-name {
        top: 55px;
        padding: 0  10px 90px 20px;
-       position: relative;
        text-align: center;
-       width: 90%;
+       width: 70%;
+       margin: 0 auto;
     }
     
     .introduce {
@@ -738,15 +728,13 @@
     }
     
     .introduce-in {
-        padding: 20px 30px 20px 35px;
+        padding: 20px 40px 20px 35px;
     }
 }
 
 @media screen and ( min-width: 831px) {
     .pro-photo {
-        position: relative;
-        left: 110px;
-        top: 55px;
+        padding: 0 0 0 50px;
     }
     
     .introduce {
@@ -766,10 +754,9 @@
     }
     
     .btn-file input[type=file] {
-        right: 15%;
+        right: 14%;
         min-width: 64%;
     }
-   
 }
 
 @media screen and ( min-width: 855px ) {
@@ -778,16 +765,14 @@
     }
     
     .btn-file input[type=file] {
-        right: 19%;
-        min-width: 62%;
-    }
-    
-    .edit-photo {
-        padding: 60px 150px;
+        right: 16%;
+        min-width: 66%;
+        top: 51%;
+        min-height: 63%;
     }
     
     #postbutton {
-        width: 60%;
+        width: 40%;
     }
 }
 
@@ -797,6 +782,27 @@
     }
 }
 
+@media screen and ( min-width: 930px ) {
+    .posttitle input, .postcontent textarea {
+        width: 70%;
+    }
+    
+    .post_prev {
+        height: 460px;
+        width: 70%;
+    }
+    
+    #img_prev {
+        height: 454px;
+    }
+    
+    .post_new  {
+        padding: 50px 20px 0 60px;
+    }
+}
+
+
+
 @media screen and ( min-width: 951px ) and ( max-width: 1160px) {
     .introduce {
         margin-right: 60px; 
@@ -805,7 +811,7 @@
 
 @media screen and ( min-width: 1000px ) {
     .form-group input, .form-group textarea {
-        width: 50%;
+        width: 60%;
     }
     
     .form-group {
@@ -817,7 +823,7 @@
     }
     
     .toppage {
-        padding: 40px 30px 0 0;
+        padding: 40px 0 0 0;
         max-width: 95%;
     }
     
@@ -825,19 +831,52 @@
         width: 33%;
         padding: 40px 0 30px 30px;
     }
+    
+    .posttitle input, .postcontent textarea {
+        width: 70%;
+    }
+    
+    .post_new {
+        padding: 50px 40px 0 100px;
+        
+    }
+    
+    .post_new label {
+        position: relative;
+        left: 20px;
+    }
+    
+    #header {
+        padding: 0 20px;
+    }
+    
+    .upload-label {
+        width: 28%;
+    }
 }
 
 
 @media screen and ( min-width: 1070px ) {
     .btn-file input[type=file] {
-        right: 20%;
-       min-width: 60%;
+        right: 16%;
+       min-width: 65%;
+    }
+}
+
+@media screen and ( min-width: 1100px) {
+    .post_prev {
+        width: 62%;
+        height: 470px;
+    }
+    
+    #img_prev {
+        height: 464px;
     }
 }
 
 @media screen and ( min-width: 1200px) {
     .pro-photo {
-        left: 160px;
+        left: 125px;
     }
     
     .user-name {

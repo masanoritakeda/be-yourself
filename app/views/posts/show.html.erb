@@ -1,3 +1,21 @@
-<%= @post.title %>
-<%= @post.content %>
-<%= image_tag @post.image.url %>
+<section class="post_show">
+  <ul>
+    <li class="show_photo">
+      <%= image_tag @post.image.url %>
+    </li>
+    
+    <li class="show_photo_title">
+      <%= @post.title %>
+    </li>
+    <li >
+     <%=  link_to image_tag(@post.user.image.url), user_path(@post.user), class: "user_image" %>
+    </li>
+    <li class="show_photo_content">
+      <%= @post.content %>
+    </li>
+    
+    
+  </ul>
+</section>
+
+

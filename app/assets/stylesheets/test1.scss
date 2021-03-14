@@ -1,5 +1,6 @@
 body {
     height: auto;
+     background: #f9f9f9;
 }
 
 h2 {
@@ -14,144 +15,79 @@ ul {
     list-style: none;
 }
 
+input, textarea {
+    outline: 0;
+}
+
 #wrapper {
   width:100%;
   overflow:hidden;
-  background: #f9f9f9;
+ 
 }
 /* ヘッダー */
 
-
-
-#header_bar {
-    margin: 0 0 0 0;
-    background: #f9f9f9;
-}
-。
-#header_bar {
-    margin: 0 0 4px 0;
-    box-shadow: inherit;
-}
-
-#header_bar {
-    margin: 0 0 18px 0;
-    box-shadow: 0 1.5px 5.5px 0.5px #fefefe;
-    position: relative;
-    z-index: 100;
-}
-
-#header_wrapper {
-    width: 100%;
-    min-width: initial;
-    max-width: inherit;
-}
-
-#header_wrapper {
-    background: #fff;
-   box-shadow: 0px 1.5px 5.5px 0.5px #f2f2f2;
-    position: relative;
-    z-index: 2;
-}
-
-
 #header {
-    width: auto;
+    width: 100%;
+    padding-left: 10px;
     background: url() #fff;
-    padding: 0  0 20px;
     min-width: inherit;
     max-width: inherit;
     height: 80px;
+    box-shadow: 0px 1.5px 5.5px 0.5px #f2f2f2;
 }
 
-#header {
-    margin: 0 auto;
-    width: auto;
-    max-width: 1280px;
-    text-align: left;
-    position: relative;
-}
-
-
-#title_logo:hover, #dropmenu li a img:hover, #post-button img:hover, .signup a img:hover, .login a img:hover  {
+#title_logo:hover, #dropmenu li a img:hover, #post-button img:hover, .signup  img:hover, .login  img:hover  {
     opacity: 0.7;
 } 
 
-
-
-#title_logo a {
-    display: block;
-}
-
-
-
-#header #title_logo {
+ #title_logo {
     width: 0;
+    z-index: 2;
+    position: relative;
+    top: 8px;
 }
 
 #header a {
     text-decoration: none;
 }
 
-.header_sns #header #title_logo a img {
-    margin: 20px;
-    position: relative;
-    bottom: 12px;
-}
-
-.header_sns #header #title_logo a img {
+#title_logo a img {
     width: 165px;
 }
 
- #title_logo a {
-    height: 20px;
- }
-
-.login, .signup {
+.account {
     text-align: right;
     position: relative;
-    left: 20px;
+    bottom: 74px;
+    width: 56%;
+    left: 34%;
 }
-.login a img {
+.login  img {
+    position: relative;
+    width: 49px;
+    right: 5px;
+    height: 48px;
+}
+
+.signup  img  {
     width: 50px;
+    height: 51px;
 }
-.login a {
+#gn_menu {
+    z-index: 2;
     position: relative;
-    right: 65px;
-    bottom: 45px;
-}
-
-.signup a img  {
-    width: 55px;
-}
- .signup a {
-     position: relative;
-    right: 130px;
-    bottom: 100px;
- }
-
-
-#post-button  img  {
-    position: relative;
-    bottom: 16px;
     
 }
-
 #gn_menu #post-button {
    float: right;
+   position: relative;
+    bottom: 48px;
+    right: 10px;
 }
 
-#gn_menu #post-button  {
-    display: block;
-}
 #gn_menu #post-button  img  {
-   width: 70px;
+   width: 65px;
 } 
-
-
-
-
-
-
 
 
 h1 {
@@ -232,18 +168,19 @@ h1 {
     color: #8c8c8c;
 }
 
-
-#dropmenu {
-    padding: 0;
-    margin: 0;
+.user_image img {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
 }
 
-
-#dropmenu li a img {
-    border-radius: 100px;
-    width: 54px;
+#dropmenu {
+    width: 0;
+    float: right;
+    padding: 0;
     position: relative;
-    left: 83px;
+    left: 70px;
+    bottom: 49px;
 }
 
 
@@ -253,24 +190,11 @@ h1 {
     bottom: 22px;
 }
 
-
-#dropmenu li ul li {
-    position: relative;
-    top: 15px;
-    left: 10px;
-}
 #dropmenu li ul li a {
     color: #b7b7b7;
 }
 
 #dropmenu > li:hover li:hover > a {  background: #6c757d }
-
-#dropmenu {
-    width: 0;
-}
-#dropmenu {
-    float: right;
-}
 
 #dropmenu li a {
     display: block;
@@ -280,10 +204,11 @@ h1 {
     text-align: center;
 }
 #dropmenu li ul {
-    left: 0;
     width: 140px;
     margin: 0;
     padding: 0;
+    position: relative;
+    right: 38px;
     
 }
 #dropmenu li ul li {
@@ -293,6 +218,10 @@ h1 {
     background: #fff;
     color: #fff;
     transition: .3s;
+    position: relative;
+    top: 15px;
+    left: 10px;
+    
 }
 
 
@@ -364,7 +293,7 @@ textarea {
 }
 
 .edit-mypage {
-    padding: 30px 0;
+    padding: 30px 10px;
     margin-bottom: 100px;
 }
 
@@ -378,7 +307,7 @@ textarea {
 .form-wrapper {
     background: #fff;
     margin: 2em auto;
-    padding: 2em 1em;
+    padding: 20px 0;
     max-width: 500px;
 }
 
@@ -413,10 +342,41 @@ textarea {
     outline: none;
 }
 
+.form-item-photo {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.form-item-photo img {
+     border-radius: 50%;
+    width: 140px;
+    height: 140px;
+}
+
+.form-item-photo h4 {
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+}
+
+
+.form-item-photo label {
+     padding: 10px 40px;
+    background-color: #f1f3f4;
+    cursor: pointer;
+    color: rgb(102, 102, 102);
+}
+.form-item-photo input {
+    display: none;
+}
+
+.form-item-photo div {
+    padding-top: 10px;
+}
+
 .button-panel {
     margin: 2em 0 0;
     width: 100%;
-   
+   padding: 0 20px;
 }
 
 .button-panel .button {
@@ -445,36 +405,29 @@ textarea {
     text-align: center;
     background: rgb(250, 250, 250);
     border: 1px solid rgb(206, 212, 218);
-    padding: 60px 30px;
+    padding: 60px 0;
     margin: 0 auto;
 }
 
 .edit-photo img {
     border-radius: 50%;
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     position: relative;
+    bottom: 10px;
 }
 
 
 .bo {
     position: relative;
-    
 }
-
-
-
 
 #nav-drawer  {
-    text-align: right;
-   
-}
-
-#nav-drawer #nav-open {
     position: relative;
     right: 19px;
-    top: 5px;
+    bottom: 30px;
+    text-align: right;
 }
  
 
@@ -533,7 +486,6 @@ textarea {
   overflow: auto;
   position: fixed;
   top: 0;
-  
   z-index: 9999;
   width: 1030px;
   max-width: 330px;
@@ -543,62 +495,32 @@ textarea {
   -webkit-transform: translateX(-150%);
   transform: translateX(220%);
   background: #fafafa;
-}
-
-.nav-logo {
-   text-align: center;
-   padding: 40px 20px 40px 0;
-   background: #ffffff !important;
-}
-
-#nav-content .nav-logo img {
-   width: 50%;
-   height: 50px;
-   position: relative;
-   left: 18px;
+  padding: 0;
 }
 
 #nav-content li {
     border-bottom: 1px solid rgb(238, 238, 238);
 }
 
-.menu {
-    padding: 20px 0 38px;
-    height: 30px;
-}
-#nav-content .user a, #nav-content .menu a{
-    display: block;
-    font-size: 16px;
-    
-    line-height: 1;
-    width: 100%;
-    text-align: center;
-    
+#nav-content .user a, #nav-content .menu a {
+    font-size: 14px;
+    text-align: left;
     color: #555;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     margin: 0;
+    display: block;
+    padding: 0 0 0 38px;
+    line-height: 4.8;
 }
 
-#nav-content {
-    padding: 0;
-}
-
-#nav-content .user a {
-    background: #F3F3F3;
-    color: #555;
-    height: 75px;
-}
-
-#nav-content .user {
-    margin-bottom: 10px;
+#nav-content .user   {
     background: #f8f8ff;
 }
 
-
-
-
-
+.user_image img {
+    margin-right: 10px;
+}
 
 /*チェックがついたら表示させる*/
 #nav-input:checked ~ #nav-close {
@@ -617,7 +539,7 @@ textarea {
 /*ユーザーページ*/
 .pro-photo {
     position: relative;
-    top: 30px;
+    top: 60px;
 }
 
 
@@ -626,8 +548,6 @@ textarea {
    border-radius: 50%;
    width:  160px;       
    height: 160px;  
-   position: relative;
-   left: 7px;
 }
 
 .user-name {
@@ -635,7 +555,7 @@ textarea {
     font-weight: 800;
     position: relative;
     top: 80px;
-    left: 105px;
+    left: 30px;
     text-align: center;
     width: 200px;
     padding: 0  25px;
@@ -685,16 +605,16 @@ textarea {
     
 }
 
-.postpage {
-    padding-top: 50px;
+.post_new {
+    padding: 50px 20px 0 20px;
 }
 
-.postpage label {
+.post_new label {
     font-size: 1rem;
     font-weight: 600;
     color: #C0C0C0;
     border-left: solid 5px #7db4e6;/*左線*/
-    padding: 0 15px;
+    padding: 0 120px 0 15px;
     
 }
 
@@ -775,7 +695,7 @@ textarea {
 }
 
 #postbutton {
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     padding-bottom: 70px;
 }
@@ -796,16 +716,17 @@ textarea {
 
 .upload-label {
   display: inline-block;
-  cursor: pointer; /* カーソルを指に */
-  margin: 1em 0; /* まわりの余白 */
-  padding: .7em 1em; /* 文字まわりの余白 */
-  line-height: 1.4; /* 行間 */
-  background: #3e8bff; /* 背景色 */
-  color: #FFF; /* 文字色 */
-  font-size: 0.95em; /* フォントサイズ */
-  border-radius: 2.5em; /* 角の丸み */
-  transition: 0.2s; /* ホバーをなめらかに */
+  cursor: pointer; 
+  margin: 1em 0; 
+  padding: .7em 1em; 
+  line-height: 1.4;
+  background: #3e8bff; 
+  color: #FFF; 
+  font-size: 0.95em; 
+  border-radius: 2.5em;
+  transition: 0.2s; 
   position: relative;
+  width: 70%;
 }
 /* ホバー時 */
 .upload-label:hover {
@@ -824,8 +745,18 @@ textarea {
     width: 100%;
 }
 
+.toppage {
+    padding-top: 40px;
+}
+
 .toppage ul .photo_info {
     padding: 25px 0 0;
+}
+
+.toppage p {
+    font-size: 1.3rem;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .photo_info  li {
@@ -834,8 +765,8 @@ textarea {
 
 .top_first_line img {
     border-radius: 100px;
-    width: 38px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
 }
 
 .top_first_line a {
@@ -859,4 +790,65 @@ textarea {
 .top_title {
     font-size: 1.5rem;
     font-weight: 500;
+    padding-left: 10px;
 }
+
+.top_content {
+    padding-left: 10px;
+}
+
+.pagination {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.post_show {
+    padding-top: 20px;
+}
+
+.post_show ul {
+   padding: 0;
+}
+
+.show_photo {
+    text-align: center;
+}
+
+.show_photo img  {
+    width: 95%;
+}
+
+.show_photo_title, .show_photo_content {
+   padding-left: 10px;
+}
+
+.post_show ul li {
+    padding-top: 20px;
+}   
+
+.show_photo_title {
+    font-size: 1.8rem;
+}
+
+ .search_form {
+    
+    padding: 0 10px 25px;
+    background: #fff;
+}
+
+.search_form form {
+    font-size: 0.7rem;
+}
+
+.searchtext {
+    background: #f2f2f2;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    height: 40px;
+}
+
+.searchbutton {
+    display: none;
+}
+

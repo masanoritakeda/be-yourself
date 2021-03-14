@@ -15,24 +15,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
-    <script>
-     $('#myImage').on('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-          $("#preview").attr('src', e.target.result);
-        }
-        reader.readAsDataURL(e.target.files[0]);
-    });
-    </script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <style lang="scss">
-    </style>
   </head>
 
   <body>
     <div id="wrapper">
-      <%= render 'layouts/header',  user: @user %> 
+      <%= render 'layouts/header'%> 
     
       <div id="main_column">
         <%= render 'layouts/flash_messages' %>

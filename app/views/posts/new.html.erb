@@ -1,15 +1,15 @@
-<section class="postpage">
+<section class="post_new">
   <%= form_with(model: @post, local: true) do |f| %>
     <h2 class="post">写真を投稿する</h2>
     <div class="fileup">
       <span class="btn btn-default btn-file">
         <%= f.file_field :image, class: 'img_filed', required: "required" %>
-        <%= f.label :image, '写真を選択' %>
+        <label>写真を選択</label>
         <%= f.hidden_field :image_cache %>
       </span>
       <div class="post_prev">
        <% if @post.image? %>
-          <%= image_tag @post.image.url, id: :img_prev%>
+          <%= image_tag @post.image.url, id: :img_prev %>
         <% else %>
         <div>
           <%= image_tag "select.png", id: :img_prev, size: '400x100' %>
@@ -34,17 +34,22 @@
       </script>
     </div>
     <div class="posttitle">
-      <%= f.label :title, 'タイトル' %> 
-      <%= f.text_field :title, required: "required" %>
+      <label>タイトル</label>
+      <div>
+        <%= f.text_field :title, required: "required" %>
+      </div>
+      
     </div>
     <div class="postcontent">
-      <%= f.label :content, '写真の説明' %>
-      <%= f.text_area :content, required: "required" %> 
+      <label>写真の説明</label>
+      <div>
+        <%= f.text_area :content, required: "required" %> 
+      </div>
     </div>
     
     <div id="postbutton">
      <%= f.submit '投稿する', class: 'btn btn-primary btn-block' %>
-     </div>
+    </div>
   <% end %>
 </section>
 
