@@ -60,3 +60,5 @@ gem 'rails-i18n'
 gem 'mini_magick'
 
 gem 'ransack'
+
+gem 'jquery-rails'

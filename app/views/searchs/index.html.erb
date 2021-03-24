@@ -1,3 +1,13 @@
+<div class="search_second">
+  <%= render 'posts/search_form' %>
+  <div class="search_message">
+    <h2>自分らしい、新しい日常</h2>
+  </div>
+  <div class="po">
+    <%= image_tag "test10.jpg" %>
+    
+    <div><%= image_tag "test12.jpg" %></div>
+  </div>
 <section class="search">
   <div class="search_word">
     <% if params[:search].present? %>
@@ -7,22 +17,20 @@
   
   <div class="search_result">
     <% @posts.each do |post| %>
-    <ul>
-      <li　class="search_post">
-        <% if post.image.present? %>
-          <%= link_to image_tag(post.image.url), "/posts/#{post.id}" %>
-        <% end %>
-      </li>
       <ul>
-        <li >
-          <%= link_to image_tag(post.user.image.url),  user_path(post.user) %>
-          
+        <li class="search_post">
+          <% if post.image.present? %>
+            <%= link_to image_tag(post.image.url), "/posts/#{post.id}" %>
+          <% end %>
         </li>
-        <li>
+        <li class="search_user_image">
+          <%= link_to image_tag(post.user.image.url),  user_path(post.user) %>
+          <%= link_to post.user.name, user_path(post.user) %> 
+        </li>
+        <li class="search_title">
           <%= post.title %>
         </li>
       </ul>
-    </ul>
     <% end %>
    <%= paginate @posts %>
   </div>

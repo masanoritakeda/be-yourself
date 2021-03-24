@@ -11,6 +11,10 @@ h2 {
     padding-bottom: 30px;
 }
 
+h1 {
+    font-size: 2.8rem;
+}
+
 ul {
     list-style: none;
 }
@@ -88,13 +92,6 @@ input, textarea {
 #gn_menu #post-button  img  {
    width: 65px;
 } 
-
-
-h1 {
-    font-size: 2.8rem;
-}
-
-
 
 
 #main_column h1 {
@@ -573,6 +570,7 @@ textarea {
 }
 .profile {
     padding: 0;
+    margin: 0;
 }
 
 
@@ -584,7 +582,7 @@ textarea {
 .show_post {
     display: inline-block; 
     width: 96%;
-    padding: 40px 0 30px 40px;
+    padding: 40px 0 30px 20px;
 }
 
 .show_post img {
@@ -670,12 +668,12 @@ textarea {
 
 
 
-.posttitle {
+.posttitle, .postplace {
     padding: 20px 0 60px;
     
 }
 
-.posttitle input {
+.posttitle input, .postplace input {
     width: 100%;
     border: 1px solid #ced4da;
     height: 45px;
@@ -737,12 +735,22 @@ textarea {
   display: none;
 }
 
+.photo_part {
+    padding-top: 200px;
+}
+
 .photo_post {
     padding: 20px 0 10px;
+    margin: 0 auto;
+}
+
+.top_photo   {
+    text-align: center;
 }
 
 .top_photo img {
     width: 100%;
+   
 }
 
 .toppage {
@@ -750,10 +758,10 @@ textarea {
 }
 
 .toppage ul .photo_info {
-    padding: 25px 0 0;
+    padding: 25px 10px;
 }
 
-.toppage p {
+.photo_part p {
     font-size: 1.3rem;
     text-align: center;
     padding-bottom: 20px;
@@ -803,38 +811,67 @@ textarea {
 }
 
 .post_show {
-    padding-top: 20px;
+    padding: 30px 0 50px;
 }
 
 .post_show ul {
    padding: 0;
 }
 
-.show_photo {
-    text-align: center;
-}
-
 .show_photo img  {
-    width: 95%;
+    width: 90%;
 }
 
-.show_photo_title, .show_photo_content {
-   padding-left: 10px;
-}
-
-.post_show ul li {
-    padding-top: 20px;
+.post_show ul .show_photo {
+    padding: 20px 0 0;
+    text-align: center;
 }   
 
-.show_photo_title {
-    font-size: 1.8rem;
+.show_place {
+    padding: 30px 30px 0;
 }
 
- .search_form {
-    
-    padding: 0 10px 25px;
-    background: #fff;
+.show_place p {
+    display: inline;
 }
+
+.place {
+    color: #828282;
+}
+
+.show_photo_title {
+    font-size: 1.2rem;
+    padding: 25px 30px;
+}
+
+.show_photo_user {
+   border-top: 1px solid #cccccc;
+   padding: 25px 0 0 30px;
+}
+
+.show_photo_user a {
+    color: #343a40;
+    text-decoration: none;
+}
+
+.show_photo_content {
+   padding: 30px 30px;
+}
+
+.show_photo_user a img {
+    width: 40px;
+    height: 40px;
+}
+
+ .search {
+     padding: 50px 0 130px;
+ }
+ 
+ .search_word {
+     padding: 0 0 30px 20px;
+     font-size: 1.3rem;
+     
+ }
 
 .search_form form {
     font-size: 0.7rem;
@@ -844,11 +881,112 @@ textarea {
     background: #f2f2f2;
     border: none;
     width: 100%;
-    padding: 15px;
+    padding: 15px 15px 15px 20px;
     height: 40px;
 }
 
 .searchbutton {
     display: none;
 }
+
+.search_second {
+    width: 100%;
+    padding: 0px 0 20px;
+    display:  inline-block; 
+    position: relative;
+}
+
+.search_second  .po img {
+    width: 100%;
+    height: 220px;
+}
+
+.search_second .search_form {
+    position: absolute;
+    top: 155px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.search_message {
+    position: absolute;
+    top: 90px;
+    background-color: rgba(255,255,255,0.5);
+    height: 70px;
+    width: 62%;
+    align-items: center;
+    display: flex;
+    margin-left: 20%;
+}
+
+.search_message h2 {
+    padding: 0;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.search_result ul   {
+    float: left;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+
+
+.search_user_image {
+    padding-top: 20px;
+}
+
+.search_user_image img {
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+}
+
+.search_user_image a {
+    color: #343a40;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.search_title {
+    padding-top: 10px;
+}
+
+.slide {
+    padding: 0;
+    text-align: center;
+}
+
+.slide img {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 100%;
+   
+}
+
+.slick-dots {
+    display: none !important;
+}
+
+.slide_part h4 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.slide_part p {
+    margin: 0 auto !important;
+    font-size: 0.8rem;
+    width: 95%;
+    padding-left: 20px;
+}
+
+.test img {
+    width: 300px;
+}
+
 
