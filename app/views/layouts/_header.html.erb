@@ -15,7 +15,7 @@
             <%= current_user.name %>
           </a>
         </li>
-        <li class="menu"><a href="/">自分らしい生活を探す</a></li>
+        <li class="menu"><a href="/">ホーム</a></li>
         <li class="menu"><%= link_to 'マイページ', user_path(current_user) %></li>
         <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
         <li class="menu"><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>

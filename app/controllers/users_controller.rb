@@ -33,7 +33,6 @@ class UsersController < ApplicationController
   def update 
     @user = User.find_by(id: params[:id])
     
-    
     if current_user == @user
       if @user.update(user_params)
         flash[:success] = 'ユーザー情報を編集しました。'
@@ -50,6 +49,6 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :introduce, :image, :remove_image)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :introduce, :image, :image_cache)
   end 
 end

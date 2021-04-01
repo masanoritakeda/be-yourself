@@ -18,6 +18,10 @@
       <%= @post.content %>
     </li>
   </ul>
+  <% if @post.user == current_user %>
+   <%= link_to("編集", "/posts/#{@post.id}/edit", method: :get) %>
+   <%= link_to("削除する", post_path(@post), method: :delete) %>
+  <% end %>
 </section>
 
 

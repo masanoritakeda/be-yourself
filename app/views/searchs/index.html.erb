@@ -5,14 +5,16 @@
   </div>
   <div class="po">
     <%= image_tag "test10.jpg" %>
-    
     <div><%= image_tag "test12.jpg" %></div>
   </div>
+</div>
 <section class="search">
+  <%= render 'posts/category' %>
   <div class="search_word">
     <% if params[:search].present? %>
       『<%= params[:search] %>』 の検索結果 <%= @posts.count %>件
     <% end %>
+    <%= @category.name %> の検索結果 <%= @posts.count %>件
   </div>
   
   <div class="search_result">

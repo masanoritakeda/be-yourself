@@ -26,6 +26,7 @@
         <label class="upload-label">
           写真を選択
           <%= f.file_field :image, :id => 'user_img' %>
+           <%= f.hidden_field :image_cache %>
         </label>
        </div>
         <script type="text/javascript">

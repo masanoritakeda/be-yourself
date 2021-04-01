@@ -25,7 +25,9 @@
       <div>
         <label>
           <%= f.file_field :image, required: "required",  :id => 'user_img' %> 写真を選択
+          <%= f.hidden_field :image_cache %>
         </label>
+        <%= f.hidden_field :image_cache %>
         <script type="text/javascript">
         $(function() {
           function readURL(input) {
@@ -50,4 +52,7 @@
       <%= f.submit '登録',  class: 'button' %>
     </div>
   <% end %>
+  <div class="other_acount">
+    <%= link_to 'ログインをしたい方はこちら', login_path %>
+  </div>
 </div>

@@ -1,1 +1,20 @@
-s
+<section class="post_edit">
+  <%= form_with(model: @post, local: true) do |f| %>
+    <h2 class="edit">編集する</h2>
+    <div class="posttitle">
+      <label class="post_label">タイトル</label>
+      <%= f.text_field :title, required: "required" %>
+    </div>
+    <div class="postplace">
+      <label class="post_label">撮影場所</label>
+      <%= f.text_field :place,  placeholder: "例 )  江ノ島" %>
+    </div>  
+    <div class="postcontent">
+      <label class="post_label">写真の説明</label>
+      <%= f.text_area :content %> 
+    </div>
+    <div id="postbutton">
+     <%= f.submit '投稿する', class: 'btn btn-primary btn-block' %>
+    </div>
+  <% end %>
+</section> 

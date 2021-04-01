@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_action :require_user_logged_in, only: [:new, :create, :destroy, :edit]
- 
+  before_action :require_user_logged_in, only: [:new, :create, :destroy, :edit, :update]
+  
   def index 
-    @posts = Post.order(id: :desc).page(params[:page]).per(2)
+    @posts = Post.order(id: :desc).page(params[:page]).per(15)
   end 
   
   def show 
@@ -20,14 +20,31 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
      
-    if @post.save!
+    if @post.save
      redirect_to @post
     else 
       render :new
     end 
   end
+  
+  def edit 
+    @post = Post.find(params[:id])
+  end 
+  
+  def update 
+    @post = Post.find(params[:id])
+    
+    if @post.update!(post_params)
+     redirect_to @post
+    else
+     render :edit 
+    end 
+  end 
 
   def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to action: :index
   end
   
   
@@ -36,7 +53,7 @@ class PostsController < ApplicationController
   end
   
   def self.category(category_id)
-  if search
+   if search
 　  Post.where(category_id: category_id)
 　 else
 　  Post.all
@@ -46,6 +63,8 @@ class PostsController < ApplicationController
   private
   
   def post_params
-    params.require(:post).permit(:content, :image, :title, :image_cache, :place, :category_id).merge(user_id: params[:user_id])
+    params.require(:post).permit(:content, :image, :title, :image_cache, :place, category_ids: [] )
   end 
+  
+  
 end

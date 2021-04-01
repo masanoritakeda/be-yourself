@@ -1,9 +1,6 @@
 <div class="search_first">
   <%= render 'posts/search_form' %>
 </div>
-<div class="test">
-  <%= link_to(image_tag("a.png"), controller: "searchs", action: "index", category_id: 5) %>
-</div>
 
 <section class="toppage">
   <div class="slide_part">
@@ -17,6 +14,10 @@
     <h4>自分らしい生活を見つけるための場所</h4>
     <p>今の社会情勢をきっかけに住む場所を決める優先順位は、勤務地の通いやすさから暮らしの充実度に変わりつつあります。<br>
     どこに住んで、どんなことをして、どんな毎日を送りたいのかを一緒に見つけていきましょう。</p>
+  </div>
+  <div class="category_part">
+    <p class="category_title">カテゴリから探す</p>
+    <%= render 'posts/category' %>
   </div>
   <div class="photo_part">
     <p>最近の投稿</p>

@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_24_023159) do
+ActiveRecord::Schema.define(version: 2021_03_26_003148) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "post_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,7 +33,6 @@ ActiveRecord::Schema.define(version: 2021_03_24_023159) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "place"
-    t.integer "category_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

@@ -15,7 +15,7 @@ h1 {
     font-size: 2.8rem;
 }
 
-ul {
+li {
     list-style: none;
 }
 
@@ -28,6 +28,12 @@ input, textarea {
   overflow:hidden;
  
 }
+
+#main_column h1 {
+    font-size: 1.8rem;
+    font-weight: 550;
+}
+
 /* ヘッダー */
 
 #header {
@@ -94,16 +100,7 @@ input, textarea {
 } 
 
 
-#main_column h1 {
-  
-    font-size: 1.8rem;
-    font-weight: 550;
-   
-}
-
-
-
-
+/* ログイン、サインイン */
 
  #submit input {
     line-height: 40px;
@@ -116,7 +113,6 @@ input, textarea {
     font-feature-settings: "pkna";
     letter-spacing: 1px;
      margin: 0  auto;
-     
 }
 
 #submit  {
@@ -125,10 +121,6 @@ input, textarea {
     width: 60%;
     padding: 40px 0 60px;
 }
-
-
-
-
 
  .form-group {
     margin-bottom: 0;
@@ -146,14 +138,10 @@ input, textarea {
  }
  
  
- 
-
- 
 .other_acount {
     text-align: center;
 	font-size: 0.8rem;
 	padding-top: 30px;
-
 }
 
 
@@ -303,7 +291,7 @@ textarea {
 
 .form-wrapper {
     background: #fff;
-    margin: 2em auto;
+    margin: 20px auto 60px;
     padding: 20px 0;
     max-width: 500px;
 }
@@ -568,11 +556,11 @@ textarea {
 .introduce-in br {
     padding: 10px 0;
 }
+
 .profile {
     padding: 0;
     margin: 0;
 }
-
 
 .introduce {
     max-width: 1200px;
@@ -600,34 +588,30 @@ textarea {
     width: 100%;
     z-index: 20;
     height: 325px;
-    
 }
 
 .post_new {
     padding: 50px 20px 0 20px;
 }
 
-.post_new label {
+.post_label {
     font-size: 1rem;
     font-weight: 600;
     color: #C0C0C0;
-    border-left: solid 5px #7db4e6;/*左線*/
+    border-left: solid 5px #7db4e6;
     padding: 0 120px 0 15px;
-    
 }
 
 .fileup {
     padding: 60px 0;
 }
 
-
-
 .post_prev {
-    width: 100%;     // 80%  //
+    width: 100%;     
     position: relative;
     height: 330px;
     top: 10px;
-    border: 3px dashed #c0c0c0; //
+    border: 3px dashed #c0c0c0;
     text-align: center;
     margin: 0 auto;
 }
@@ -643,7 +627,7 @@ textarea {
 }
 .btn-file input[type=file] {
   position: absolute;
-  top: 41%;
+  top: 38%;
   right: 5%;
   min-width: 90%;
   min-height: 45%;
@@ -653,24 +637,29 @@ textarea {
   cursor: inherit;
   display: block;
   z-index: 30;
-  
 }
 
+.post_edit {
+    padding: 90px 20px 50px;
+}
 
-
-.post {
+.post, .edit {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     position: relative;
 }
 
-
-
-
-.posttitle, .postplace {
+.posttitle, .postplace, {
     padding: 20px 0 60px;
-    
+}
+
+.postcategory {
+    padding: 20px 0 100px;
+}
+
+.postcategory .post_label {
+  margin-bottom: 20px;
 }
 
 .posttitle input, .postplace input {
@@ -692,9 +681,40 @@ textarea {
     top: 15px;
 }
 
-#postbutton {
+.categorytype label {
+    display: block; 
+    float: left; 
+    margin: 3px; 
+    width: 18%; 
+    height: 35px; 
+    text-align: center; 
+    line-height: 30px;     
+    padding: 0 5px; 
+    cursor: pointer; 
+    background: rgb(250, 250, 250);
+    border: 2px solid rgb(206, 212, 218);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    position: relative;
+    left: 5px;
+}
+
+.categorytype input[type=checkbox] {
+    display: none; 
+}
+
+input[type=checkbox]:checked + label {
+    background: rgb(125, 180, 230);
+    color: #ffffff; 
+}
+.categorytype label:hover {
+    background-color: #E2EDF9;
+}
+
+#postbutton  {
     width: 50%;
     margin: 0 auto;
+    padding-top: 100px;
     padding-bottom: 70px;
 }
 
@@ -736,7 +756,7 @@ textarea {
 }
 
 .photo_part {
-    padding-top: 200px;
+    padding-top: 250px;
 }
 
 .photo_post {
@@ -761,7 +781,7 @@ textarea {
     padding: 25px 10px;
 }
 
-.photo_part p {
+.photo_part p, .category_title{
     font-size: 1.3rem;
     text-align: center;
     padding-bottom: 20px;
@@ -864,13 +884,14 @@ textarea {
 }
 
  .search {
-     padding: 50px 0 130px;
+     padding: 50px 0 350px;
+     
  }
  
  .search_word {
-     padding: 0 0 30px 20px;
+     padding: 140px 40px 30px 20px;
+     width: 80%;
      font-size: 1.3rem;
-     
  }
 
 .search_form form {
@@ -885,13 +906,17 @@ textarea {
     height: 40px;
 }
 
+.search_post img {
+    height: 210px;
+    width: 90%;
+}
+
 .searchbutton {
     display: none;
 }
 
 .search_second {
     width: 100%;
-    padding: 0px 0 20px;
     display:  inline-block; 
     position: relative;
 }
@@ -931,11 +956,8 @@ textarea {
     margin-bottom: 50px;
 }
 
-
-
-
-.search_user_image {
-    padding-top: 20px;
+.search_user_image, .search_title {
+    padding: 20px 15px 0 15px;
 }
 
 .search_user_image img {
@@ -951,8 +973,8 @@ textarea {
     text-decoration: none;
 }
 
-.search_title {
-    padding-top: 10px;
+.slide_part {
+    padding-bottom: 70px;
 }
 
 .slide {
@@ -985,8 +1007,31 @@ textarea {
     padding-left: 20px;
 }
 
-.test img {
-    width: 300px;
+.category li {
+    text-align: center;
+    
+}
+
+.category a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: black;
+  float:left;
+  padding: 0.25em 0.5em;
+  width: 21%;
+  background: #ECECEC;
+  margin: 0 0px 10px 2px;
+  transition: .4s;
+  margin: 0 0px 10px 8px;
+  text-align: center;
+  position: relative;
 }
 
 
+
+
+.category li a:hover {
+    color: white;
+    background: black;
+}
