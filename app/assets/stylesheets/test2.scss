@@ -50,8 +50,7 @@
 
 @media screen and ( min-width: 400px) and ( max-width: 450px ) {
     .account {
-        left: 32%;
-        bottom: 71px;
+        left: 30%;
     }
 }
 
@@ -78,6 +77,21 @@
     }
 }
 
+@media screen and ( max-width: 434px) {
+    .post_show {
+        padding: 0 0 50px;
+    }
+    
+    .show_photo img {
+        position: relative;
+        bottom: 20px;
+    }
+    
+    .show_photo_title {
+        padding: 5px 88px 26px 80px;
+    }
+}
+
 @media screen and ( min-width: 430px) {
     .edit-photo {
         height: 290px;
@@ -93,20 +107,41 @@
 }
 
 @media screen and ( max-width: 450px ) {
-   #dropmenu li a img  {
-       width: 42px;
-       height: 42px;
+   #dropmenu .down a img  {
+       width: 37px;
+       height: 37px;
    }
    
-   #dropmenu li ul   {
+   #dropmenu {
+       left: 75px;
+   }
+   
+   #dropmenu .down ul   {
         display: none;
    }
    
-   #dropmenu li {
+   #dropmenu .down {
        right: 176px;
        bottom: 19px;
    }
    
+   #dropmenu .down {
+       font-size: 0.7rem;
+   }
+   
+   #gn_menu #post-button {
+       bottom: 11px;
+       right: 195px;
+   }
+   
+    #gn_menu #post-button img {
+        width: 40px;
+        height: 32px;
+    }
+    
+    #nav-drawer {
+        bottom: 26px;
+    }
    
    .form-group .box {
        position: relative;
@@ -197,7 +232,7 @@
     }
     
     .search_message {
-        margin-left: 74px;
+        margin-left: 82px;
         top: 65px;
         width: 60%;
         height: 55px;
@@ -221,11 +256,15 @@
     .categorytype label {
         font-size: 0.8rem;
     }
+    
+    .pro-photo {
+        left: 0;
+    }
 }
 
 @media screen and ( min-width: 451px ) {
     .edit-mypage {
-        padding: 30px 35px;
+        padding: 60px 35px;
     }
     
     #nav-input:checked ~ #nav-content {
@@ -242,13 +281,30 @@
     }
     
     .search_second .po img {
-        height: 330px;
+        height: 320px;
     }
     
     .search_second .search_form {
-        top: 240px;
+        top: 230px;
     }
-
+    
+    .edit_link a {
+         padding: 13px;
+         font-size: 0.8rem;
+    }
+    
+    #dropmenu {
+        left: 76px;
+        bottom: -17px;
+    }
+    
+    .pro-photo {
+        left: -5px;
+    }
+    
+    #gn_menu #post-button img {
+        height: 35px;
+    }
 }
 
 
@@ -293,9 +349,35 @@
     }
 }
 
-@media screen and ( min-width: 501px )  {
-    .show_photo img {
-        width: 80%;
+@media screen and ( min-width: 451px ) and ( max-width: 499px ) {
+    #gn_menu #post-button {
+        bottom: 14px;
+        right: 195px;
+    }
+    
+}
+
+@media screen and ( min-width: 500px ) and ( max-width: 700px ) {
+    #gn_menu #post-button    {
+       position: relative;
+       right: 200px;
+       bottom: 14px;
+    }
+}
+
+@media screen and ( max-width: 500px ) {
+    #dropmenu li ul{
+        display: none;
+    }
+}
+
+@media screen and ( min-width: 501px ) {
+    .post_show ul .show_photo {
+        padding: 20px 0px 0px 9%;
+    }
+    
+    #dropmenu {
+        bottom: -18px;
     }
 }
 
@@ -312,15 +394,27 @@
         width: 35%;
     }
     
+    .show_photo_user {
+        padding: 65px 35px 0 30px;
+    }
+    
+    .show_place {
+        padding: 40px 30px 0;
+    }
+    
+    .show_photo_content {
+        padding: 40px 30px;
+    }
+    
 }
 
 @media screen and ( max-width: 550px ) {
     .post_new {
-        padding-top: 30px;
+        padding-top: 60px;
     }
 }
 
-@media screen and ( min-width: 570px ) and( max-width: 729px ) {
+@media screen and ( min-width: 600px ) and( max-width: 729px ) {
     .user-name {
         left: -5px;
     }
@@ -374,6 +468,10 @@
     .search_result ul {
         padding: 0;
     }
+    
+    .user-name {
+        left: -6px;
+    }
 }
 
 
@@ -382,6 +480,7 @@
         padding: 20px 20px 20px 20px;
         position: relative;
         left: 10px;
+        margin: 60px auto;
     }
     
     .top_first_line {
@@ -478,12 +577,17 @@
         padding: 60px 0;
     }
     
+    .searchtext {
+        border: 2px solid #ccc; /*線の太さ・色*/
+        background: #ffffff;
+    }
+    
     .search_form {
         text-align: center;
     }
     
     .search_word {
-         padding: 215px 40px 30px 50px;
+         padding: 225px 40px 55px 50px;
     }
     
     .search_post img {
@@ -501,6 +605,10 @@
         border: 2px solid #555555;
         margin: 0 0px 30px 10px;
     }
+    
+    .pro-photo {
+        left: 4px;
+    }
 }
  
 
@@ -512,14 +620,32 @@
     }
 }
 
-@media screen and ( max-width: 700px ) {
-    #gn_menu #post-button    {
-        display: none;
+@media screen and ( min-width: 650px) {
+    #nav-drawer {
+        right: 55px;
     }
-      
-    .pro-photo {
-        top: 40px;
-        right: 5px;
+}
+
+@media screen and ( max-width: 700px ) {
+    .search {
+        padding: 60px 0 350px;
+        position: relative;
+        
+    }
+    
+    .search_first {
+        position: relative;
+        top: 35px;
+        padding: 0 15px;
+    }
+    
+    .search_first .searchtext {
+        position: relative;
+        bottom: 10px;
+    }
+    
+    .toppage {
+        padding-top: 70px;
     }
 }
 
@@ -535,30 +661,52 @@
         padding-left: 40px;
     }
     
-    #dropmenu li  ul {
+    #dropmenu .down  ul {
         bottom: 5px;
     }
     
     #dropmenu {
-        left: 125px;
+        left: 105px;
+        bottom: -18px;
     }
     
     .account {
-        bottom: 42px;
-        left: 41%;
+        left: 37%;
+    }
+    
+    .signup img, .login img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .login {
+        bottom: -7px;
+    }
+    
+    #dropmenu li p, #post-button p {
+        font-size: 0.8rem;
+    }
+    
+    #dropmenu .down {
+        position: relative;
+        top: 9px;
+    }
+    
+    #dropmenu li ul {
+        right: 70px;
+    }
+    
+    #gn_menu #post-button {
+        bottom: 15px;
+        right: 216px;
     }
     
     .hamburger {
         display: none;
     }
     
-    #dropmenu li {
-        position: relative;
-        top: 9px;
-    }
-    
-    #nav-drawer {
-        display: none;
+    .account #nav-drawer {
+        display: block;
     }
     
     .login a {
@@ -576,11 +724,11 @@
     }
     
     .post_new label {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .postcategory .post_label {
-        margin-bottom: 25px;
+        margin-bottom: 40px;
     }
     
     .form-group input, .form-group textarea {
@@ -591,22 +739,20 @@
         padding-right: 50px;    
     }
     
+    .search_first {
+        top: 30px;
+    }
+    
     .search_second .search_form .searchtext {
         left: 0;
-        
+        width: 585px;
     }
     
     .searchtext {
         position: relative;
-        left: 25px;
-         width: 90%;
+        width: 90%;
         margin: 0 auto;
     }
-    
-    .search_second {
-         position: relative;
-         bottom: 37px;
-     }
      
      .search_message {
          width: 300px;
@@ -620,6 +766,7 @@
     
     .search_second .search_form {
         top: 320px;
+        right: 2px;
     }
     
     .slide_part {
@@ -629,19 +776,23 @@
     .category_title {
         padding-bottom: 30px;
     }
-}
-
-@media screen and ( min-width: 701px) and ( max-width: 729px ){
+    
+    .user-button {
+        left: -3px;
+    }
+    
     .pro-photo {
         top: 40px;
-        left: 25px;
+        left: 0px;
     }
 }
 
-@media screen and (min-width: 701px) and ( max-width: 1000px) {
+
+
+@media screen and (min-width: 801px) and ( max-width: 999px) {
      .toppage {
-        padding: 60px 30px 40px 25px;
-    }   
+        padding: 40px 30px 40px 25px;
+    }
 }
 
 @media screen and ( max-width: 729px ) {
@@ -649,25 +800,19 @@
         padding: 0;
     }
     
-    .user-name {
-    left: -10px;
+    #show {
+        display: none;
     }
 }
 
 @media screen and ( min-width: 730px ) and  ( max-width: 830px) {
     .user-name {
-        left: -15px;
+        left: -6px;
     }
     
     .post_prev {
         width: 85%;
     }
-    
-    .pro-photo {
-        top: 40px;
-        left: 25px;
-    }
-    
 }
 
 @media screen and ( min-width: 730px ) {
@@ -747,8 +892,6 @@
         display: block;
    }
    
-   
-   
    .show_post {
        width: 49%;
        padding: 40px 10px 30px 27px;
@@ -756,6 +899,10 @@
    
    .show_post img {
        width: 98%;
+   }
+   
+   .show_photo_title {
+       padding: 32px 29px 37px;
    }
    
    .edit-photo {
@@ -774,6 +921,27 @@
     
     .category a {
         left: 10px;
+    }
+    
+    .show_place {
+        display: none;
+    }
+    
+    #show {
+        position: relative;
+        top: 6px;
+    }
+    
+    .show_photo_user div {
+       display: inline-block;
+    }
+    
+    .show_photo_user div  p {
+        display: inline-block;
+    }
+    
+    #show {
+        float: right;
     }
 }
 
@@ -813,27 +981,42 @@
         width: 49%;
     } 
     
+    .show_photo_user {
+        padding: 65px 14% 0;
+    }
+    
+    .show_photo_content {
+        padding: 40px 14%;
+    }
+    
     #submit {
         width: 45%;
+    }
+    
+    .post_show ul .show_photo {
+        text-align: center;
+        padding: 30px 0 0;
     }
     
     .show_photo img {
         width: 600px;
     }
     
-    .show_photo_title {
-        padding: 35px 10px;
-        text-align: center;
+    .search_first {
+       position: relative;
+       top: -62px;
+       left: 27%;
+       width: 50%;
+       z-index: 2;
     }
     
-    .show_photo_user {
-        padding: 25px 0 0 12%;
+    .login {
+        bottom: 0;
     }
     
-    .show_photo_content {
-        padding: 30px 12%;
+    .signup {
+        bottom: 1px;
     }
-    
 }
 
 @media screen and ( max-width: 830px) {
@@ -858,6 +1041,8 @@
 @media screen and ( min-width: 831px) {
     .pro-photo {
         padding: 0 0 0 50px;
+        left: 3px;
+        top: 55px;
     }
     
     .introduce {
@@ -879,6 +1064,10 @@
     .btn-file input[type=file] {
         right: 14%;
         min-width: 64%;
+    }
+    
+    .show_photo_title {
+        padding: 42px 29px 45px 35px;
     }
 }
 
@@ -953,6 +1142,13 @@
     #postbutton {
         width: 40%;
     }
+    
+    .categorytype label {
+       width: 11%;
+       margin: 14px;
+       position: relative;
+       left: 10px;
+    }
 }
 
 @media screen and ( min-width: 831px ) and ( max-width: 950px) {
@@ -992,6 +1188,10 @@
     .search_result ul {
         width: 32%;
         padding: 0 0 0 25px;
+    }
+    
+    .search_word {
+        padding: 165px 40px 55px 50px;
     }
     
     .search_post img {
@@ -1047,15 +1247,6 @@
     }
 }
 
-@media screen and ( max-width: 999px ) {
-    .search_first .search_form {
-        padding: 0 10px 25px;
-        background: #fff;
-    }
-    
-    
-}
-
 @media screen and ( min-width: 1000px ) {
     .slide_part {
         position: relative;
@@ -1075,7 +1266,7 @@
     }
     
     .toppage {
-        padding: 40px 0 0 0;
+        padding: 20px 0 0;
         max-width: 95%;
     }
     
@@ -1095,19 +1286,20 @@
     }
     
     #header {
-        padding: 0 30px;
+        padding: 0 65px 0 75px;
     }
     
     .upload-label {
         width: 28%;
     }
     
-    .search_first .search_form {
-       width: 40%;
-       margin: 0 auto;
-       position: relative;
-       bottom: 60px;
-       left: 100px;
+    .search {
+        position: relative;
+        right: 20px;
+    }
+    
+    .search_result ul {
+        padding: 0 0 0 46px;
     }
     
     .search_for {
@@ -1147,6 +1339,14 @@
     .category a {
         left:2%;
     }
+    
+    .account {
+        left: 42%;
+    }
+    
+    .search_first {
+        left: 30%;
+    }
 }
 
 
@@ -1163,6 +1363,7 @@
     .search_post img {
         height: 250px;
     }
+
 }
 
 @media screen and ( min-width: 1100px) {
@@ -1181,6 +1382,18 @@
     
     .category a {
         left: 4%;
+    }
+    
+    .edit-mypage .form-group {
+        padding-right: 305px;
+    }
+    
+    .show_photo_user {
+        padding: 65px 18% 0;
+    }
+    
+    .show_photo_content {
+        padding: 40px 18%;
     }
 }
 
@@ -1205,6 +1418,12 @@
         margin-left: 390px;
     }
     
+    .search_first {
+       left: 12%;
+       width: 40%;
+       margin: 0 auto;
+    }
+    
     .search_second .po img {
         width: 100%;
     }
@@ -1219,6 +1438,10 @@
     
     .category a {
         left: 6%;
+    }
+    
+    .search_message {
+        margin-left: 36%;
     }
 }
 

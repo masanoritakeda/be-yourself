@@ -8,6 +8,8 @@ Rails.application.routes.draw do
  post 'new/posts' => 'posts#new'
  get 'searchs', to: 'searchs#index'
  post "posts/:id/update" => "posts#update"
+ 
  resources :users, only: [:show, :create, :edit, :update]
  resources :posts
+ resources :categories, only: [:index]
 end

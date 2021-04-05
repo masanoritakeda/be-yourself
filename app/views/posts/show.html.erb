@@ -7,21 +7,30 @@
       <%= @post.title %>
     </li>
     <li class="show_photo_user">
-      <%=  link_to image_tag(@post.user.image.url), user_path(@post.user), class: "user_image" %>
-      <%= link_to @post.user.name, user_path(@post.user) %>
+      <div id="user">
+        <%=  link_to image_tag(@post.user.image.url), user_path(@post.user), class: "user_image" %>
+        <%= link_to @post.user.name, user_path(@post.user) %>
+      </div> 
+      <div id="show">
+        <p class="place">撮影場所 &nbsp;</p> 
+        <p><%= @post.place %></p>
+      </div>
     </li>
-    <li class="show_place">
+    <li class="show_place" >
       <p class="place">撮影場所 &nbsp;</p> 
       <p><%= @post.place %></p>
     </li>
     <li class="show_photo_content">
       <%= @post.content %>
     </li>
+    <ul class="edit_link">
+      <% if @post.user == current_user %>
+       <li><%= link_to("編集する", "/posts/#{@post.id}/edit", method: :get) %></li>
+       <li><%= link_to("削除する", post_path(@post), method: :delete) %></li>
+      <% end %>
+    </ul>
   </ul>
-  <% if @post.user == current_user %>
-   <%= link_to("編集", "/posts/#{@post.id}/edit", method: :get) %>
-   <%= link_to("削除する", post_path(@post), method: :delete) %>
-  <% end %>
+  
 </section>
 
 

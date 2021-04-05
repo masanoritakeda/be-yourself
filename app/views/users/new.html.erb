@@ -1,8 +1,7 @@
-<div class="form-wrapper">
-  <h2>アカウント登録</h2>
-  <%= form_with(model: @user, local: true) do |f| %>
-    <%= render 'layouts/error_messages', model: f.object %>
-    
+<%= form_with(model: @user, local: true) do |f| %>
+  <%= render 'layouts/error_messages', model: f.object  %>
+  <div class="form-wrapper">
+    <h2>アカウント登録</h2>
     <div class="form-item">
       <%= f.text_field :name, required: "required", placeholder: "名前" %>
     </div>
@@ -27,7 +26,6 @@
           <%= f.file_field :image, required: "required",  :id => 'user_img' %> 写真を選択
           <%= f.hidden_field :image_cache %>
         </label>
-        <%= f.hidden_field :image_cache %>
         <script type="text/javascript">
         $(function() {
           function readURL(input) {
@@ -45,7 +43,7 @@
           });
         </script>
       </div>
-      
+     <p>（必ず選択してください）</p> 
     </div>
     
     <div class="button-panel">

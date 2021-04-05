@@ -1,0 +1,25 @@
+<div id="nav-drawer">
+    <input id="nav-input" type="checkbox" class="nav-unshown">
+    <label id="nav-open" for="nav-input"><span></span></label>
+    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+    <ul id="nav-content">
+      <% if logged_in? %>
+        <li class="user">
+          <a class="user_image" href="<%= user_path(current_user) %>">
+            <%= image_tag current_user.image.url %>
+            <%= current_user.name %>
+          </a>
+        </li>
+        <li class="menu"><a href="/">ホーム</a></li>
+        <li class="menu"><%= link_to 'マイページ', user_path(current_user) %></li>
+        <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
+        <li class="menu"><%= link_to 'プロフィール編集', edit_user_path(current_user) %></li>
+        <li class="menu"><%= link_to 'ログアウトする', logout_path, method: :delete %></li>
+      <% else %>
+        <li class="menu"><a href="/">ホーム</a></li>
+        <li class="menu"><%= link_to 'アカウントを登録する(無料)',  signup_path %></li>
+        <li class="menu"><%= link_to 'ログイン', login_path %></li>
+        <li class="menu"><%= link_to '投稿する', new_post_path(@post) %></li>
+      <% end %>
+    </ul>
+  </div>
