@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_26_003148) do
+ActiveRecord::Schema.define(version: 2021_04_06_091035) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -26,13 +26,13 @@ ActiveRecord::Schema.define(version: 2021_03_26_003148) do
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
     t.string "content"
-    t.bigint "user_id"
+    t.string "title"
     t.string "image"
+    t.string "place"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "place"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -40,9 +40,9 @@ ActiveRecord::Schema.define(version: 2021_03_26_003148) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
+    t.string "introduce"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "introduce"
     t.string "image"
   end
 
