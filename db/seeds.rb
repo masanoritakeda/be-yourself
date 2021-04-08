@@ -11,7 +11,3 @@ Category.create!([
   {name: "運動"},
   {name: "その他"}
 ])
-
-User.create!([
-  {email: "t.masanori0712@icloud.com", password_digest: "$2a$12$8fKGDMtK9W7tObRSsofl0O9YZdiR0acRP0rvi9h6B9TiFvgRMoF1u", introduce: nil, image: "IMG_2436.JPG", name: nil}
-])
