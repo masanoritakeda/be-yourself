@@ -1,13 +1,17 @@
 Category.create!([
-  {category_id: 1, name: "海・川"},
-  {category_id: 2,name: "自然"},
-  {category_id: 3,name: "観光"},
-  {category_id: 4,name: "日常"},
-  {category_id: 5,name: "食べ物"},
-  {category_id: 6,name: "景色"},
-  {category_id: 7,name: "街並み"},
-  {category_id: 8,name: "休日"},
-  {category_id: 9,name: "趣味"},
-  {category_id: 10,name: "運動"},
-  {category_id: 11,name: "その他"}
+  {name: "海・川"},
+  {name: "自然"},
+  {name: "観光"},
+  {name: "日常"},
+  {name: "食べ物"},
+  {name: "景色"},
+  {name: "街並み"},
+  {name: "休日"},
+  {name: "趣味"},
+  {name: "運動"},
+  {name: "その他"}
+])
+
+User.create!([
+  {email: "t.masanori0712@icloud.com", password_digest: "$2a$12$8fKGDMtK9W7tObRSsofl0O9YZdiR0acRP0rvi9h6B9TiFvgRMoF1u", introduce: nil, image: "IMG_2436.JPG", name: nil}
 ])
