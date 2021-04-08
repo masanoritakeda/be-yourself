@@ -63,6 +63,8 @@ gem 'ransack'
 
 gem 'jquery-rails'
 
+gem 'seed_dump'
+
 group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
